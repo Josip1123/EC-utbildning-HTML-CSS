@@ -9,3 +9,25 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1.5rem;
+
+    .mobile-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'24
+}

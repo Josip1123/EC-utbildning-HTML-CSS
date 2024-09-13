@@ -1,5 +1,5 @@
 // buttons
-.btn {
+.main-btn {
     padding: 0.5rem 3rem;
     border-radius: 0.5rem;
     background-color: $main-color;
@@ -11,9 +11,32 @@
 
 .material-symbols-outlined {
     font-variation-settings:
-        'FILL'0,
+        'FILL'1,
         'wght'600,
-        'GRAD'0,
+        'GRAD',
         'opsz'24;
 }
 
+
+.down-arrow {
+    display: inline-block;
+    padding: 1.2rem;
+    border-radius: 50%;
+    background-color: #F3F6FF;
+
+    &::before {
+        content: "keyboard_arrow_down";
+    }
+}
+
+.up-arrow {
+    display: inline-block;
+    padding: 1.4rem;
+    border-radius: 50%;
+    background-color: $main-color;
+
+    &::before {
+        content: "keyboard_arrow_up";
+        color: white;
+    }
+}

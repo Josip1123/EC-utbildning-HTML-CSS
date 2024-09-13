@@ -70,7 +70,7 @@ h6 {
 }
 
 /*Fonts*/
-.btn {
+.main-btn {
   padding: 0.5rem 3rem;
   border-radius: 0.5rem;
   background-color: #6366F1;
@@ -78,7 +78,111 @@ h6 {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 24;
+  font-variation-settings: "FILL" 1, "wght" 600, "GRAD", "opsz" 24;
+}
+
+.down-arrow {
+  display: inline-block;
+  padding: 1.2rem;
+  border-radius: 50%;
+  background-color: #F3F6FF;
+}
+.down-arrow::before {
+  content: "keyboard_arrow_down";
+}
+
+.up-arrow {
+  display: inline-block;
+  padding: 1.4rem;
+  border-radius: 50%;
+  background-color: #6366F1;
+}
+.up-arrow::before {
+  content: "keyboard_arrow_up";
+  color: white;
+}
+
+/* toggle switch with help from W3schools 
+my addition of box shadow and "Dark Mode" text */
+.switch {
+  position: relative;
+  display: inline-flex;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #848181;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #6366F1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.darkmode-text {
+  display: none;
+}
+@media (width > 768px) {
+  .darkmode-text {
+    position: absolute;
+    left: -6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+  }
+}
+
+.slider,
+.slider::before,
+input:checked + .slider,
+input:focus + .slider,
+input:checked + .slider:before {
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -99,76 +203,14 @@ a {
   gap: 2rem;
   padding: 1rem 2rem;
   position: relative;
-  /* toggle switch with help from W3schools 
-  my addition of box shadow and "Dark Mode" text */
+  max-width: 576px;
+  margin: 0 auto;
+}
+.header-container .logo {
+  height: 70px;
 }
 .header-container .main-navigation {
   display: none;
-}
-.header-container .switch {
-  position: relative;
-  display: inline-flex;
-  width: 60px;
-  height: 34px;
-}
-.header-container .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.header-container .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-}
-.header-container .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: 0.4s;
-}
-.header-container input:checked + .slider {
-  background-color: #6366F1;
-}
-.header-container input:focus + .slider {
-  box-shadow: 0 0 1px #6366F1;
-}
-.header-container input:checked + .slider:before {
-  transform: translateX(26px);
-}
-.header-container .slider.round {
-  border-radius: 34px;
-}
-.header-container .slider.round:before {
-  border-radius: 50%;
-}
-.header-container .darkmode-text {
-  display: none;
-}
-@media (width > 768px) {
-  .header-container .darkmode-text {
-    position: absolute;
-    left: -6rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-  }
-}
-.header-container .slider,
-.header-container .slider::before,
-.header-container input:checked + .slider,
-.header-container input:focus + .slider,
-.header-container input:checked + .slider:before {
-  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 .header-container .signin {
   display: none;
@@ -184,11 +226,11 @@ a {
   .header-container {
     gap: 3rem;
     padding: 1rem 2rem;
-    max-width: 900px;
+    max-width: 992px;
     margin: 0 auto;
   }
 }
-@media (width > 1400px) {
+@media (width > 1200px) {
   .header-container {
     grid-template-columns: auto 1fr auto auto;
     max-width: 1320px;
@@ -204,4 +246,54 @@ a {
   .header-container .mobile-menu {
     display: none;
   }
+}
+
+.hero-wrapper {
+  padding: 2rem 0;
+  background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #f0e3f5);
+}
+.hero-wrapper .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.hero-wrapper .hero-section .hero-heading {
+  font-size: 40px;
+  text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
+  font-weight: 800;
+}
+.hero-wrapper .hero-section .hero-text {
+  max-width: 30ch;
+  font-size: 18px;
+  color: #585C7B;
+}
+.hero-wrapper .hero-section .app-store-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.hero-wrapper .hero-section .app-store-container .app-store-links {
+  height: 50px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-wrapper .hero-section .app-store-container .app-store-links.app-store {
+  background-image: url("/styles/img/appstore.svg");
+}
+.hero-wrapper .hero-section .app-store-container .app-store-links.google-play {
+  background-image: url("/styles/img/playstore.svg");
+}
+.hero-wrapper .hero-section .discover-more {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.hero-wrapper .hero-img {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

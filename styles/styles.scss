@@ -4,10 +4,14 @@
 @import "slider";
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-.dark {
-    background-color: black;
-    color: white;
-}
+
+// /* Dark Mode */
+// @media (prefers-color-scheme: dark) {
+//     body {
+//         background-color: black;
+//         color: white;
+//     }
+// }
 
 body {
     font-family: "Manrope", sans-serif;
@@ -28,7 +32,6 @@ a {
     gap: 2rem;
     padding: 1rem;
     position: relative;
-    max-width: 576px;
     margin: 0 auto;
 
     .logo {
@@ -80,105 +83,51 @@ a {
     }
 }
 
-.hero-wrapper {
-    padding: 2rem 0 0 0;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), $gradient-color);
+.hero-wrapper-bg {
+    background: rgb(99, 102, 241);
+    background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
 
-    @media (width > 768px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr;
-        gap: 2rem;
-    }
+    .hero-container {
 
-    .hero-heading {
-        font-size: $h1-fontsize;
-        text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
-        font-weight: $extra-bold;
-        text-align: center;
-        padding-bottom: 2rem;
-
-        @media (width > 768px) {
-            grid-column: 1/3;
-        }
-    }
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-        max-width: 768px;
         margin: 0 auto;
-        padding-bottom: 2rem;
+        text-align: center;
 
-        @media (width > 768px) {
-            align-items: flex-start;
-            text-align: left;
-        }
-        @media (width > 1200px) {
-            align-items: flex-start;
-            text-align: left;
+        .hero-heading {
+            font-size: $h1-fontsize;
+            font-weight: $extra-bold;
+            text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
+            padding-bottom: 2rem;
         }
 
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
 
-        .hero-text {
-            max-width: 30ch;
-            font-size: $L-text;
-            color: $font-color;
-        }
-    }
-
-    .app-store-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-
-        @media (width > 768px) {
-            flex-direction: row;
-        }
-
-        .app-store-links {
-            height: 50px;
-
-            background-position: center;
-            background-repeat: no-repeat;
-
-            @media (width > 768px) {
-                width: 50%;
+            .hero-text {
+                max-width: 35ch;
             }
 
-            &.app-store {
-                background-image: url("/styles/img/appstore.svg");
+            .app-store-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
             }
 
-            &.google-play {
-                background-image: url("/styles/img/playstore.svg");
+            .discover-more {
+                display: flex;
+                padding-bottom: 2rem;
+                align-items: center;
+                gap: 1rem;
             }
         }
-    }
 
-    .discover-more {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-
-
-}
-
-aside {
-    display: flex;
-    align-items: end;
-
-    .hero-img {
-        display: none;
-
-        @media (width > 768px) {
-            display: block;
+        aside {
+            display: none;
         }
+
     }
+
 }

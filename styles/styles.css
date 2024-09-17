@@ -264,7 +264,8 @@ a {
   gap: 2rem;
 }
 .hero-wrapper-bg .hero-container .hero-content .hero-text {
-  max-width: 35ch;
+  max-width: 34ch;
+  font-size: 18px;
 }
 .hero-wrapper-bg .hero-container .hero-content .app-store-container {
   display: flex;
@@ -277,6 +278,14 @@ a {
   padding-bottom: 2rem;
   align-items: center;
   gap: 1rem;
+  color: #585C7B;
+  font-size: 14px;
+  font-weight: 400;
+}
+.hero-wrapper-bg .hero-container .hero-content .hero-text,
+.hero-wrapper-bg .hero-container .hero-content .discover-more {
+  color: #585C7B;
+  font-weight: 400;
 }
 .hero-wrapper-bg .hero-container aside {
   display: none;

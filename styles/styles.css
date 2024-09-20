@@ -378,7 +378,7 @@ a {
   }
 }
 .hero-wrapper-bg .hero-container .hero-content .app-store-container .app-store::before {
-  content: url("/styles/img/apple-store.svg");
+  content: url("img/apple-store.svg");
   position: absolute;
   left: 50%;
   top: 50%;
@@ -386,7 +386,7 @@ a {
   padding-top: 0.5rem;
 }
 .hero-wrapper-bg .hero-container .hero-content .app-store-container .google-play::before {
-  content: url("/styles/img/google-play.svg");
+  content: url("img/google-play.svg");
   position: absolute;
   left: 50%;
   top: 50%;
@@ -470,8 +470,7 @@ a {
 }
 .app-features-container .feature {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem 0;
 }
 .app-features-container .feature-icon {
@@ -484,7 +483,7 @@ a {
   position: relative;
 }
 .app-features-container .icon-1::before {
-  content: url("/styles/img/gradient-icon-1.svg");
+  content: url("img/gradient-icon-1.svg");
   position: absolute;
   top: 55%;
   left: 50%;

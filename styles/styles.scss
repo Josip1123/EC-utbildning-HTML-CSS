@@ -36,7 +36,7 @@ a {
     max-width: 450px;
 
     .logo {
-        height: 70px;
+        height: 4.5rem;
     }
 
     .main-navigation {
@@ -66,7 +66,7 @@ a {
     @media (min-width: 1200px) {
         grid-template-columns: auto 1fr auto auto;
         max-width: 1320px;
-        padding: 1rem $padding-left-big_screens;
+        padding: 1rem 1rem;
 
         .main-navigation {
             display: block;
@@ -93,6 +93,7 @@ a {
         text-align: center;
         max-width: 450px;
         position: relative;
+        padding: 1rem;
 
         @media (min-width: 768px) {
             display: grid;
@@ -130,7 +131,7 @@ a {
                 grid-column: 1/1;
                 grid-row: 1/2;
                 font-size: $display-4;
-                padding: 5rem 0 1rem $padding-left-big_screens;
+                padding: 5rem 0 1rem 0;
                 text-align: start;
             }
         }
@@ -142,7 +143,7 @@ a {
             gap: 2rem;
 
             @media (min-width: 768px) {
-                padding: 5rem 0 2rem 1rem;
+                padding: 5rem 0 2rem 0;
                 align-items: start;
                 gap: 4rem;
 
@@ -152,7 +153,7 @@ a {
                 align-items: start;
                 grid-column: 1/1;
                 grid-row: 2/3;
-                padding: 0rem 2.5rem 2rem $padding-left-big_screens;
+                padding: 0rem 5rem 2rem 0;
             }
 
             .hero-text {
@@ -266,10 +267,42 @@ a {
                 display: block;
                 position: absolute;
                 bottom: 0;
-                right: 0;
+                right: 1rem;
             }
         }
 
     }
 
+}
+
+
+.brands-container {
+    display: none;
+
+    @media (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 900px;
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 1rem;
+        gap: 1rem;
+        .brand-logo {
+            border: 2px solid $border-gray;
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+        .brand-logo:nth-last-child(-n + 2) {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        max-width: 1320px;
+        .brand-logo:nth-last-child(-n + 2) {
+            display: block;
+        }
+    }
+
+    
 }

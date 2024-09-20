@@ -51,10 +51,8 @@
                             Save, spend & manage money in your pocket.
                         </p>
                         <div class="app-store-container">
-
                             <a href="#" class="app-store btn"> </a>
                             <a href="#" class="google-play btn"> </a>
-
                         </div>
                         <a href="#" class="discover-more">
                             <span class="material-symbols-outlined down-arrow">
@@ -63,11 +61,19 @@
                         </a>
                     </div>
                     <aside>
-                        <img
-                            src="/styles/img/hero-img.png"
-                            alt="image of a phone"
-                            class="iphone-img"
-                        />
+                        <picture>
+                            <source
+                                media="(min-width: 1200px)"
+                                srcset="/styles/img/hero-img.png"
+                            />
+
+                            <source
+                                media="(min-width: 768px)"
+                                srcset="/styles/img/hero-img-small.png"
+                            />
+
+                            <img src="" alt="Responsive Image" />
+                        </picture>
                     </aside>
                 </section>
             </div>

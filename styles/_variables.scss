@@ -14,19 +14,26 @@ $display-5: 48px;
 $display-6: 42px;
 
 $lead-text: 24px;
-$XL-text:   20px;
-$L-text:    18px;
-$M-text:    16px;
-$S-text:    14px;
-$XS-text:   12px;
+$XL-text: 20px;
+$L-text: 18px;
+$M-text: 16px;
+$S-text: 14px;
+$XS-text: 12px;
 
 $regular: 400;
 $medium: 500;
 $bold: 700;
 $extra-bold: 800;
+
+
+
 // colors
 
 $main-color: #6366F1;
 $gradient-color: #efe4f4;
 $font-color:#585C7B;
 $text-color-gray: #585C7B;
+
+//margins and padding
+
+$padding-left-big_screens: 2rem;

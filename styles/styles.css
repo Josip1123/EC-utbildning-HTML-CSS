@@ -441,7 +441,7 @@ a {
     max-width: 900px;
     display: flex;
     justify-content: space-between;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
     gap: 1rem;
   }
   .brands-container .brand-logo {

@@ -33,7 +33,7 @@ a {
     padding: 1rem;
     position: relative;
     margin: 0 auto;
-    max-width: 450px;
+    max-width: $max-width-small;
 
     .logo {
         height: 4.5rem;
@@ -57,15 +57,15 @@ a {
 
 
 
-    @media (min-width: 768px) {
+    @media (min-width: $ipad-mini) {
         gap: 3rem;
         padding: 1rem 1rem;
-        max-width: 900px;
+        max-width: $max-width-medium;
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $big-screen) {
         grid-template-columns: auto 1fr auto auto;
-        max-width: 1320px;
+        max-width: $max-width-big;
         padding: 1rem 1rem;
 
         .main-navigation {
@@ -91,23 +91,23 @@ a {
 
         margin: 0 auto;
         text-align: center;
-        max-width: 450px;
+        max-width: $max-width-small;
         position: relative;
         padding: 1rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: $ipad-mini) {
             display: grid;
             grid-template-columns: auto 1fr;
             grid-template-rows: auto 1fr;
-            max-width: 900px;
+            max-width: $max-width-medium;
 
         }
 
-        @media (min-width: 1200px) {
+        @media (min-width: $big-screen) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto 1fr;
-            max-width: 1320px;
+            max-width: $max-width-big;
         }
 
 
@@ -117,17 +117,17 @@ a {
             text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
             padding-bottom: 2rem;
 
-            @media (min-width: 768px) {
+            @media (min-width: $ipad-mini) {
                 grid-column: 1/3;
                 font-size: $display-5;
                 padding-bottom: 0;
             }
 
-            @media (min-width: 900px) {
+            @media (min-width: $medium-screen) {
                 padding-bottom: 3rem;
             }
 
-            @media (min-width: 1200px) {
+            @media (min-width: $big-screen) {
                 grid-column: 1/1;
                 grid-row: 1/2;
                 font-size: $display-4;
@@ -142,14 +142,14 @@ a {
             align-items: center;
             gap: 2rem;
 
-            @media (min-width: 768px) {
+            @media (min-width: $ipad-mini) {
                 padding: 5rem 0 2rem 0;
                 align-items: start;
                 gap: 4rem;
 
             }
 
-            @media (min-width: 1200px) {
+            @media (min-width: $big-screen) {
                 align-items: start;
                 grid-column: 1/1;
                 grid-row: 2/3;
@@ -160,17 +160,17 @@ a {
                 max-width: 34ch;
                 font-size: $L-text;
 
-                @media (min-width: 768px) {
+                @media (min-width: $ipad-mini) {
                     max-width: 25ch;
                     text-align: start;
 
                 }
 
-                @media (min-width: 900px) {
+                @media (min-width: $medium-screen) {
                     max-width: 30ch;
                 }
 
-                @media (min-width: 1200px) {
+                @media (min-width: $big-screen) {
                     max-width: 50ch;
                 }
             }
@@ -182,12 +182,12 @@ a {
                 gap: 1rem;
                 width: 80%;
 
-                @media (min-width: 768px) {
+                @media (min-width: $ipad-mini) {
                     gap: 0.5rem;
                     width: 100%;
                 }
 
-                @media (min-width: 900px) {
+                @media (min-width: $medium-screen) {
                     gap: 0.5rem;
                     flex-direction: row;
                     width: 100%;
@@ -195,7 +195,7 @@ a {
 
 
 
-                @media (min-width: 1200px) {
+                @media (min-width: $big-screen) {
                     padding: 0;
                 }
 
@@ -205,7 +205,7 @@ a {
                     position: relative;
                     display: inline-block;
 
-                    @media (min-width: 768px) {
+                    @media (min-width: $ipad-mini) {
                         width: 80%;
                     }
                 }
@@ -244,7 +244,7 @@ a {
                 font-size: $S-text;
                 font-weight: $regular;
 
-                @media (min-width: 1200px) {
+                @media (min-width: $big-screen) {
                     grid-column: 2/3;
                     grid-row: 1/3;
                     justify-self: flex-end;
@@ -262,7 +262,7 @@ a {
         aside {
             display: none;
 
-            @media (min-width: 768px) {
+            @media (min-width: $ipad-mini) {
 
                 display: block;
                 position: absolute;
@@ -279,12 +279,12 @@ a {
 .brands-container {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: $ipad-mini) {
         margin: 0 auto;
-        max-width: 900px;
+        max-width: $max-width-medium;
         display: flex;
         justify-content: space-between;
-        padding: 5rem 1rem;
+        padding: 4rem 1rem;
         gap: 1rem;
         .brand-logo {
             border: 2px solid $border-gray;
@@ -296,9 +296,9 @@ a {
         }
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: $big-screen) {
 
-        max-width: 1320px;
+        max-width: $max-width-big;
         .brand-logo:nth-last-child(-n + 2) {
             display: block;
         }

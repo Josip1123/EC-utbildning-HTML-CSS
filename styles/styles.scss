@@ -183,16 +183,16 @@ a {
                 width: calc(100% - 4rem);
 
 
-
                 @media (min-width: $ipad-mini) {
                     gap: 0.5rem;
+                    align-items: flex-start;
                     width: 100%;
                 }
 
                 @media (min-width: $medium-screen) {
 
                     flex-direction: row;
-
+                    
                 }
 
 

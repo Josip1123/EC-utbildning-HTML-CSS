@@ -21,7 +21,7 @@ function setLightmode() {
 function checkLocalStorageForTheme() {
     if (localStorage.theme === "dark"){
         setDarkmode();
-    } else if (localStorage.theme === "light") {
+    } else {
         setLightmode();
     }
 }

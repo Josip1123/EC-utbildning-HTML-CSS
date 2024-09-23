@@ -21,6 +21,10 @@ a {
     cursor: pointer;
 }
 
+p {
+    color: $text-color-gray;
+}
+
 .header-container {
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -188,7 +192,7 @@ a {
                 @media (min-width: $medium-screen) {
 
                     flex-direction: row;
-                    
+
                 }
 
 
@@ -244,9 +248,9 @@ a {
                 padding-bottom: 2rem;
                 align-items: center;
                 gap: 1rem;
-                color: $text-color-gray;
                 font-size: $S-text;
-                font-weight: $regular;
+                color: $text-color-gray;
+
 
                 @media (min-width: $big-screen) {
                     grid-column: 2/3;
@@ -258,7 +262,6 @@ a {
 
             .hero-text,
             .discover-more {
-                color: $text-color-gray;
                 font-weight: $regular;
             }
         }
@@ -295,6 +298,11 @@ a {
             border: 2px solid $border-gray;
             border-radius: $border-radius;
             padding: 1.5rem;
+
+            img {
+                height: 50px;
+                width: 150px;
+            }
         }
 
         .brand-logo:nth-last-child(-n + 2) {
@@ -320,12 +328,47 @@ a {
     max-width: $max-width-small;
     margin: 0 auto;
     padding: 2rem 1rem;
+    margin-bottom: 4rem;
 
-    .app-feat-heading,
-    .app-feat-text {
+    @media (min-width: $medium-screen) {
+        max-width: $max-width-medium;
+        display: grid;
+        justify-content: center;
+
+        .features-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: $big-screen) {
+        max-width: $max-width-big;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .app-features-heading,
+    .app-features-text {
         text-align: center;
         max-width: 45ch;
         padding-bottom: 2rem;
+
+        @media (min-width: $medium-screen) {
+            max-width: 65ch;
+        }
+
+        @media (min-width: $big-screen) {
+            text-align: left;
+        }
+
+    }
+
+    .app-features-heading {
+        font-size: $h3-fontsize;
+    }
+
+    .app-features-text {
+        font-size: $L-text;
     }
 
 
@@ -333,6 +376,21 @@ a {
         display: flex;
         gap: 1.5rem;
         padding: 1rem 0;
+    }
+
+    .feature-description {
+        font-size: $M-text;
+        color: $text-color-gray;
+        max-width: 40ch;
+
+        @media (min-width: $medium-screen) {
+            max-width: 30ch;
+
+        }
+    }
+
+    .feature-name {
+        margin-bottom: .5rem;
     }
 
     .feature-icon {
@@ -345,16 +403,51 @@ a {
         position: relative;
     }
 
-    .icon-1::before {
-        content: url("img/gradient-icon-1.svg");
+    .feature-icon::before {
         position: absolute;
         top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
-    .feature-description {
-        font-size: $S-text;
-        max-width: 40ch;
+    .icon-1::before {
+        content: url("img/gradient-icon-1.svg");
+    }
+
+    .icon-2::before {
+        content: url("img/gradient-icon-2.svg");
+
+    }
+
+    .icon-3::before {
+        content: url("img/gradient-icon-3.svg");
+
+    }
+
+    .icon-4::before {
+        content: url("img/gradient-icon-4.svg");
+
+    }
+
+    .icon-5::before {
+        content: url("img/gradient-icon-5.svg");
+
+    }
+
+    .icon-6::before {
+        content: url("img/gradient-icon-6.svg");
+    }
+
+    .feature-description {}
+
+    aside {
+        display: none;
+
+        @media (min-width: $big-screen) {
+            display: block;
+            position: absolute;
+            left: 2rem;
+            bottom: 0;
+        }
     }
 }

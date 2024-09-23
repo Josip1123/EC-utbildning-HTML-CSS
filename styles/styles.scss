@@ -330,10 +330,11 @@ p {
     padding: 2rem 1rem;
     margin-bottom: 4rem;
 
-    @media (min-width: $medium-screen) {
+    @media (min-width: $ipad-mini) {
         max-width: $max-width-medium;
         display: grid;
         justify-content: center;
+        margin: 0 auto;
 
         .features-wrapper {
             display: grid;
@@ -343,7 +344,7 @@ p {
 
     @media (min-width: $big-screen) {
         max-width: $max-width-big;
-        justify-content: flex-end;
+        justify-content: end;
         position: relative;
     }
 
@@ -353,12 +354,14 @@ p {
         max-width: 45ch;
         padding-bottom: 2rem;
 
-        @media (min-width: $medium-screen) {
-            max-width: 65ch;
+
+        @media (min-width: $ipad-mini) {
+            max-width: 100%;
         }
 
         @media (min-width: $big-screen) {
             text-align: left;
+            max-width: 70ch;
         }
 
     }
@@ -383,7 +386,7 @@ p {
         color: $text-color-gray;
         max-width: 40ch;
 
-        @media (min-width: $medium-screen) {
+        @media (min-width: $ipad-mini) {
             max-width: 30ch;
 
         }

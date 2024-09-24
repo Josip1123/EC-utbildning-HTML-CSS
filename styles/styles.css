@@ -196,6 +196,9 @@ a {
   all: unset;
   cursor: pointer;
 }
+a:focus {
+  outline: 2px solid #6366F1;
+}
 
 p {
   color: #585C7B;
@@ -389,6 +392,7 @@ p {
 .hero-wrapper-bg .hero-container .hero-content .app-store-container .app-store::before {
   content: url("img/apple-store.svg");
   position: absolute;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -396,6 +400,7 @@ p {
 }
 .hero-wrapper-bg .hero-container .hero-content .app-store-container .google-play::before {
   content: url("img/google-play.svg");
+  position: absolute;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -479,7 +484,6 @@ p {
     max-width: 900px;
     display: grid;
     justify-content: center;
-    margin: 0 auto;
   }
   .app-features-container .features-wrapper {
     display: grid;
@@ -494,20 +498,20 @@ p {
   }
 }
 .app-features-container .app-features-heading,
-.app-features-container .app-features-text {
+.app-features-container .app-features-heading-text {
   text-align: center;
   max-width: 45ch;
   padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .app-features-container .app-features-heading,
-  .app-features-container .app-features-text {
+  .app-features-container .app-features-heading-text {
     max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .app-features-container .app-features-heading,
-  .app-features-container .app-features-text {
+  .app-features-container .app-features-heading-text {
     text-align: left;
     max-width: 70ch;
   }
@@ -515,10 +519,10 @@ p {
 .app-features-container .app-features-heading {
   font-size: 28px;
 }
-.app-features-container .app-features-text {
+.app-features-container .app-features-heading-text {
   font-size: 18px;
 }
-.app-features-container .feature {
+.app-features-container .feature-card {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 0;
@@ -548,8 +552,9 @@ p {
 .app-features-container .feature-icon::before {
   content: "";
   position: absolute;
-  top: 50%;
+  position: absolute;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   height: 2rem;
   width: 2rem;

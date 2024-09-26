@@ -39,11 +39,15 @@ function isChecked() {
 
 darkmodeSwitch.addEventListener("change", isChecked);
 
-
-
-
 /* accordion button animation */
 
-const animatedBUttom = document.querySelector(".animated-btn");
+const animatedCards= document.querySelectorAll(".faq-card");
 
-animatedBUttom.addEventListener("click", () => animatedBUttom.classList.toggle("animate"));
+
+animatedCards.forEach((card) => {
+    card.addEventListener("click", () => {
+        card.classList.toggle("animate-and-show-answer")
+    });
+});
+
+/* accordion */

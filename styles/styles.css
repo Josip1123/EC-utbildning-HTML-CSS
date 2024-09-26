@@ -16,10 +16,6 @@
   margin: 0;
 }
 
-:root {
-  scroll-behavior: smooth;
-}
-
 /*
     Typographic tweaks!
     3. Add accessible line-height
@@ -73,6 +69,16 @@ h6 {
   isolation: isolate;
 }
 
+button, input[type=submit], input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 /*Fonts*/
 .main-btn {
   padding: 0.5rem 3rem;
@@ -89,7 +95,7 @@ h6 {
   display: inline-block;
   padding: 1rem;
   border-radius: 50%;
-  background-color: white;
+  background-color: gray;
 }
 .down-arrow::before {
   content: "keyboard_arrow_down";
@@ -650,11 +656,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 450px;
   margin: 0 auto;
+  max-width: 450px;
   gap: 2rem;
   padding: 4rem 0;
-  max-width: 450px;
 }
 @media (min-width: 768px) {
   .app-showcase-wrapper .app-showcase-container {
@@ -716,13 +721,74 @@ p {
   }
 }
 
-.animated-btn {
-  transition: all 400ms;
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .faq-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .faq-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .faq-container {
+    max-width: 1320px;
+  }
+}
+.faq-container .faq-heading {
+  font-size: 28px;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.faq-container .faq-text {
+  font-size: 16px;
+  color: #585C7B;
+  text-align: center;
+  max-width: 30ch;
+  padding-bottom: 2rem;
+}
+.faq-container .faq-card {
+  max-width: 450px;
+  padding-inline: 1rem;
+}
+.faq-container .q-and-btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.faq-container .q-and-btn-container,
+.faq-container .answer {
+  border: 1px solid #E2E5F1;
+  padding: 1rem;
+}
+.faq-container .question {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  max-width: 25ch;
+}
+.faq-container .answer {
+  font-size: 14px;
+  color: #585C7B;
+  max-width: auto;
+  display: none;
+  transition: all 200ms;
 }
 
-.animate {
+.animate-and-show-answer .answer {
+  display: block;
+}
+.animate-and-show-answer .animated-btn {
   transform: rotate(180deg);
-  transition: all 600ms;
+  transition: all 500ms;
   background-color: #6366F1;
   color: white;
 }/*# sourceMappingURL=styles.css.map */

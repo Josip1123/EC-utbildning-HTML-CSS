@@ -463,11 +463,10 @@ p {
 
     .app-showcase-container {
         @include flex-column-center;
-        max-width: $max-width-small;
         margin: $center-object;
+        @include container-sizes;
         gap: 2rem;
         padding: 4rem 0;
-        @include container-sizes;
 
         .showcase-heading {
             font-size: $h3-fontsize;
@@ -517,15 +516,71 @@ p {
 }
 
 
+.faq-container {
+    @include flex-column-center;
+    margin: $center-object;
+    @include container-sizes;
 
-// test
 
-.animated-btn {
-    transition: all 400ms;
+    .faq-heading {
+        font-size: $h3-fontsize;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .faq-text {
+        font-size: $M-text;
+        color: $text-color-gray;
+        text-align: center;
+        max-width: 30ch;
+        padding-bottom: 2rem;
+    }
+
+    .faq-card {
+        max-width: $max-width-small;
+        padding-inline: 1rem;
+    }
+
+    .q-and-btn-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .q-and-btn-container,
+    .answer {
+        border: 1px solid $border-gray;
+        padding: 1rem;
+    }
+
+
+    .question {
+        font-size: $M-text;
+        font-weight: $medium;
+        color: black;
+        max-width: 25ch;
+
+    }
+
+    .answer {
+        font-size: $S-text;
+        color: $text-color-gray;
+        max-width: auto;
+        display: none;
+        transition: all 200ms;
+    }
 }
-.animate {
-    transform: rotate(180deg);
-    transition: all 600ms;
-    background-color: $main-color;
-    color: white;
+
+.animate-and-show-answer {
+
+    .answer {
+        display: block;
+    }
+
+    .animated-btn {
+        transform: rotate(180deg);
+        transition: all 500ms;
+        background-color: $main-color;
+        color: white;
+    }
 }

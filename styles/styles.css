@@ -95,7 +95,7 @@ button, input[type=submit], input[type=reset] {
   display: inline-block;
   padding: 1rem;
   border-radius: 50%;
-  background-color: gray;
+  background-color: #F3F6FF;
 }
 .down-arrow::before {
   content: "keyboard_arrow_down";
@@ -778,7 +778,6 @@ p {
 .faq-container .answer {
   font-size: 14px;
   color: #585C7B;
-  max-width: auto;
   display: none;
   transition: all 200ms;
 }

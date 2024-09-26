@@ -1,6 +1,7 @@
 const darkmodeSwitch = document.querySelector(".darkmode-toggle");
-const preferedThemeDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
+const preferedThemeDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+).matches;
 
 if (localStorage.getItem("theme") === null && preferedThemeDark) {
     setDarkmode();
@@ -19,13 +20,12 @@ function setLightmode() {
 }
 
 function checkLocalStorageForTheme() {
-    if (localStorage.theme === "dark"){
+    if (localStorage.theme === "dark") {
         setDarkmode();
     } else {
         setLightmode();
     }
 }
-
 
 function isChecked() {
     if (darkmodeSwitch.checked) {
@@ -38,3 +38,12 @@ function isChecked() {
 }
 
 darkmodeSwitch.addEventListener("change", isChecked);
+
+
+
+
+/* accordion button animation */
+
+const animatedBUttom = document.querySelector(".animated-btn");
+
+animatedBUttom.addEventListener("click", () => animatedBUttom.classList.toggle("animate"));

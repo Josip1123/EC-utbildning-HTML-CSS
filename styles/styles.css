@@ -95,17 +95,6 @@ h6 {
   content: "keyboard_arrow_down";
 }
 
-.up-arrow {
-  display: inline-block;
-  padding: 1.4rem;
-  border-radius: 50%;
-  background-color: #6366F1;
-}
-.up-arrow::before {
-  content: "keyboard_arrow_up";
-  color: white;
-}
-
 /* toggle switch with help from W3schools 
 my addition of box shadow and "Dark Mode" text */
 .switch {
@@ -218,6 +207,21 @@ p {
   margin: 0 auto;
   max-width: 450px;
 }
+@media (min-width: 768px) {
+  .header-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .header-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-container {
+    max-width: 1320px;
+  }
+}
 .header-container .logo {
   height: 4.5rem;
 }
@@ -238,13 +242,11 @@ p {
   .header-container {
     gap: 3rem;
     padding: 1rem 1rem;
-    max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
   .header-container {
     grid-template-columns: auto 1fr auto auto;
-    max-width: 1320px;
     padding: 1rem 1rem;
   }
   .header-container .main-navigation {
@@ -266,16 +268,30 @@ p {
 .hero-wrapper-bg .hero-container {
   margin: 0 auto;
   text-align: center;
-  max-width: 450px;
   position: relative;
   padding: 1rem;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .hero-wrapper-bg .hero-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .hero-wrapper-bg .hero-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-wrapper-bg .hero-container {
+    max-width: 1320px;
+  }
 }
 @media (min-width: 768px) {
   .hero-wrapper-bg .hero-container {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
-    max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
@@ -283,7 +299,6 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-    max-width: 1320px;
   }
 }
 .hero-wrapper-bg .hero-container .hero-heading {
@@ -365,7 +380,6 @@ p {
   .hero-wrapper-bg .hero-container .hero-content .app-store-container {
     gap: 0.5rem;
     align-items: flex-start;
-    width: 100%;
   }
 }
 @media (min-width: 900px) {
@@ -470,8 +484,25 @@ p {
 }
 @media (min-width: 1200px) {
   .brands-container {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+  .brands-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) and (min-width: 900px) {
+  .brands-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .brands-container {
     max-width: 1320px;
   }
+}
+@media (min-width: 1200px) {
   .brands-container .brand-logo:nth-last-child(-n+2) {
     display: block;
   }
@@ -482,10 +513,25 @@ p {
   margin: 0 auto;
   padding: 2rem 1rem;
   margin-bottom: 4rem;
+  max-width: 450px;
 }
 @media (min-width: 768px) {
   .app-features-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .app-features-container {
     max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .app-features-container {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 768px) {
+  .app-features-container {
     display: grid;
     justify-content: center;
   }
@@ -496,7 +542,6 @@ p {
 }
 @media (min-width: 1200px) {
   .app-features-container {
-    max-width: 1320px;
     justify-content: end;
     position: relative;
   }
@@ -506,11 +551,12 @@ p {
   text-align: center;
   max-width: 45ch;
   padding-bottom: 2rem;
+  justify-self: center;
 }
 @media (min-width: 768px) {
   .app-features-container .app-features-heading,
   .app-features-container .app-features-heading-text {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
 @media (min-width: 1200px) {
@@ -594,4 +640,89 @@ p {
     left: 2rem;
     bottom: 0;
   }
+}
+
+.app-showcase-wrapper {
+  width: 100%;
+  background-color: #F3F6FF;
+}
+.app-showcase-wrapper .app-showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 4rem 0;
+  max-width: 450px;
+}
+@media (min-width: 768px) {
+  .app-showcase-wrapper .app-showcase-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .app-showcase-wrapper .app-showcase-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .app-showcase-wrapper .app-showcase-container {
+    max-width: 1320px;
+  }
+}
+.app-showcase-wrapper .app-showcase-container .showcase-heading {
+  font-size: 28px;
+}
+.app-showcase-wrapper .app-showcase-container .showcase-images-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+@media (min-width: 1200px) {
+  .app-showcase-wrapper .app-showcase-container .showcase-images-container {
+    gap: 4rem;
+  }
+}
+.app-showcase-wrapper .app-showcase-container .showcase-images-container .showcase-img:nth-child(odd) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .app-showcase-wrapper .app-showcase-container .showcase-images-container .showcase-img:nth-child(odd) {
+    display: block;
+  }
+}
+.app-showcase-wrapper .app-showcase-container .showcase-text {
+  max-width: 40ch;
+  text-align: center;
+  font-size: 16px;
+  color: #585C7B;
+}
+@media (min-width: 768px) {
+  .app-showcase-wrapper .app-showcase-container .showcase-text {
+    max-width: 50ch;
+  }
+}
+.app-showcase-wrapper .app-showcase-container h5 {
+  max-width: 20ch;
+  text-align: center;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .app-showcase-wrapper .app-showcase-container h5 {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+
+.animated-btn {
+  transition: all 400ms;
+}
+
+.animate {
+  transform: rotate(180deg);
+  transition: all 600ms;
+  background-color: #6366F1;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

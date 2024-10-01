@@ -1,3 +1,5 @@
+/* Dark mode */
+
 const darkmodeSwitch = document.querySelector(".darkmode-toggle");
 const preferedThemeDark = window.matchMedia(
     "(prefers-color-scheme: dark)"
@@ -39,15 +41,16 @@ function isChecked() {
 
 darkmodeSwitch.addEventListener("change", isChecked);
 
+/* Dark mode end */
+
 /* accordion button animation */
 
-const animatedCards= document.querySelectorAll(".faq-card");
-
+const animatedCards = document.querySelectorAll(".faq-card");
 
 animatedCards.forEach((card) => {
     card.addEventListener("click", () => {
-        card.classList.toggle("animate-and-show-answer")
+        card.classList.toggle("animate-and-show-answer");
     });
 });
 
-/* accordion */
+/* accordion end */

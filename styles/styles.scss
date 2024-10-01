@@ -459,7 +459,7 @@ p {
 
 .app-showcase-wrapper {
     width: 100%;
-    background-color: #F3F6FF;
+    background-color: $background-secondary;
 
     .app-showcase-container {
         @include flex-column-center;
@@ -518,8 +518,8 @@ p {
 
 .faq-container {
     @include flex-column-center;
-    margin: $center-object;
     @include container-sizes;
+    margin: $center-object;
 
 
     .faq-heading {
@@ -532,18 +532,16 @@ p {
         font-size: $M-text;
         color: $text-color-gray;
         text-align: center;
-        max-width: 30ch;
+        max-width: 25ch;
         padding-bottom: 2rem;
     }
 
-    .faq-card {
-        max-width: $max-width-small;
-        padding-inline: 1rem;
+    .accordion-btn {
+        margin-right: 1rem;
     }
 
     .q-and-btn-container {
         display: flex;
-        justify-content: space-between;
         gap: 1rem;
     }
 
@@ -551,6 +549,7 @@ p {
     .answer {
         border: 1px solid $border-gray;
         padding: 1rem;
+        max-width: $max-width-small;
     }
 
 
@@ -558,7 +557,7 @@ p {
         font-size: $M-text;
         font-weight: $medium;
         color: black;
-        max-width: 25ch;
+        max-width: $max-width-small;
 
     }
 
@@ -567,6 +566,76 @@ p {
         color: $text-color-gray;
         display: none;
         transition: all 200ms;
+    }
+}
+
+.contact-btn-wrapper {
+    @include container-sizes;
+    margin: $center-object;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+
+    .contact-btn {
+        margin: 2rem;
+        padding: 1rem 3rem;
+    }
+}
+
+.contact-form-wrapper {
+    background-color: $background-secondary;
+    .contact-form {
+        @include container-sizes;
+
+        padding: 3rem 0;
+        margin: $center-object;
+
+        .form-heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+
+            h3 {
+                text-align: center;
+                max-width: 20ch;
+            }
+        }
+
+        form {
+            .form-content {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                max-width: 375px;
+                margin: $center-object;
+
+                .email-input {
+                    display: block;
+                    padding: 1rem 0 1rem 2.5rem;
+                    border-radius: 0.5rem 0 0 0.5rem;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: .5rem;
+                    height: 2rem;
+                    width: 2rem;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-image: url("./img/mail-icon.svg");
+                }
+            }
+
+
+            .submit-btn {
+                border-radius: 0 0.5rem 0.5rem 0;
+            }
+        }
     }
 }
 

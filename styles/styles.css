@@ -386,6 +386,7 @@ p {
   .hero-wrapper-bg .hero-container .hero-content .app-store-container {
     gap: 0.5rem;
     align-items: flex-start;
+    width: 100%;
   }
 }
 @media (min-width: 900px) {
@@ -722,10 +723,10 @@ p {
 }
 
 .faq-container {
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 450px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -754,9 +755,6 @@ p {
   text-align: center;
   max-width: 25ch;
   padding-bottom: 2rem;
-}
-.faq-container .accordion-btn {
-  margin-right: 1rem;
 }
 .faq-container .q-and-btn-container {
   display: flex;
@@ -878,4 +876,34 @@ p {
   transition: all 500ms;
   background-color: #6366F1;
   color: white;
+}
+
+footer {
+  width: 100%;
+}
+footer .footer-container {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  font-size: 14px;
+  color: #585C7B;
+}
+@media (min-width: 768px) {
+  footer .footer-container {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  footer .footer-container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer-container {
+    max-width: 1320px;
+  }
 }/*# sourceMappingURL=styles.css.map */

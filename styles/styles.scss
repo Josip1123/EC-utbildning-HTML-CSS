@@ -188,6 +188,7 @@ p {
                 @media (min-width: $ipad-mini) {
                     gap: 0.5rem;
                     align-items: flex-start;
+                    width: 100%;
 
                 }
 
@@ -517,8 +518,8 @@ p {
 
 
 .faq-container {
-    @include flex-column-center;
     @include container-sizes;
+    @include flex-column-center;
     margin: $center-object;
 
 
@@ -536,9 +537,7 @@ p {
         padding-bottom: 2rem;
     }
 
-    .accordion-btn {
-        margin-right: 1rem;
-    }
+
 
     .q-and-btn-container {
         display: flex;
@@ -650,5 +649,18 @@ p {
         transition: all 500ms;
         background-color: $main-color;
         color: white;
+    }
+}
+
+footer {
+    width: 100%;
+    .footer-container{
+        @include container-sizes;
+        margin: $center-object;
+        @include flex-column-center;
+        gap: 0.5rem;
+        padding: 1rem 0;
+        font-size: $S-text;
+        color: $font-color;
     }
 }

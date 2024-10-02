@@ -1013,6 +1013,14 @@ footer .footer-container {
 .dark-mode .contact-form-wrapper {
   background-color: rgba(255, 255, 255, 0.076);
 }
+.dark-mode .faq-card {
+  background-color: rgba(88, 92, 123, 0.2705882353);
+}
+@media (min-width: 768px) {
+  .dark-mode .faq-card {
+    border: none;
+  }
+}
 .dark-mode .question {
   font-weight: 700;
 }

@@ -648,21 +648,33 @@ p {
 
     .contact-form {
         @include container-sizes;
-
         padding: 3rem 0;
         margin: $center-object;
+        @media (min-width: $ipad-mini){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-inline: 2rem;
+        }
 
         .form-heading {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 2rem;
+            @media (min-width: $ipad-mini){
+                margin-bottom: 0;
+                gap: 2rem;
+            }
 
 
             h3 {
                 text-align: center;
                 max-width: 20ch;
                 font-size: $XL-text;
+                @media (min-width: $ipad-mini){
+                    text-align: start;
+                }
             }
         }
 

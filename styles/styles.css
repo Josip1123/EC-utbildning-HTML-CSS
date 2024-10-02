@@ -179,10 +179,6 @@ input:checked + .slider:before {
   box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode {
-  background-color: black;
-}
-
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
@@ -234,12 +230,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 1rem;
+}
+.header-container .logo-container .logo-img {
+  height: 3rem;
+  width: 3rem;
 }
 @media (min-width: 1200px) {
   .header-container .logo-container {
     height: 4.5rem;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   .header-container .logo-container .logo-img {
     height: 4.5rem;
@@ -729,13 +730,13 @@ p {
     max-width: 50ch;
   }
 }
-.app-showcase-wrapper .app-showcase-container h5 {
+.app-showcase-wrapper .app-showcase-container h3 {
   max-width: 20ch;
   text-align: center;
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  .app-showcase-wrapper .app-showcase-container h5 {
+  .app-showcase-wrapper .app-showcase-container h3 {
     max-width: -moz-fit-content;
     max-width: fit-content;
   }
@@ -870,6 +871,7 @@ p {
 .contact-form-wrapper .contact-form form .form-content .email-input {
   display: block;
   padding: 1rem 0 1rem 2.5rem;
+  border: none;
   border-radius: 0.5rem 0 0 0.5rem;
 }
 .contact-form-wrapper .contact-form form .form-content::before {
@@ -929,4 +931,34 @@ footer .footer-container {
   footer .footer-container {
     max-width: 1320px;
   }
+}
+
+.dark-mode {
+  background-color: black;
+}
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: white !important;
+}
+.dark-mode p, .dark-mode span {
+  color: rgba(255, 255, 255, 0.664) !important;
+}
+.dark-mode .hero-container .hero-content .app-store-container .app-store, .dark-mode .hero-container .hero-content .app-store-container .google-play {
+  background-color: #6366F1;
+}
+.dark-mode .hero-container .hero-content .discover-more {
+  color: white;
+}
+.dark-mode .hero-container .hero-content .discover-more .down-arrow {
+  background-color: rgba(88, 92, 123, 0.2705882353);
+}
+.dark-mode .down-arrow {
+  background-color: rgba(88, 92, 123, 0.2705882353);
+}
+.dark-mode .feature-icon {
+  background-color: rgba(88, 92, 123, 0.2705882353);
+}
+.dark-mode .app-showcase-wrapper, .dark-mode .contact-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.076);
 }/*# sourceMappingURL=styles.css.map */

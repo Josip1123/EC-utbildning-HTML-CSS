@@ -144,7 +144,7 @@ p {
         .hero-heading {
             font-size: $h1-fontsize;
             font-weight: $extra-bold;
-            text-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
+            text-shadow: $shadow-main;
             padding-bottom: 2rem;
 
             @media (min-width: $ipad-mini) {
@@ -548,7 +548,21 @@ p {
     @include container-sizes;
     @include flex-column-center;
     margin: $center-object;
+    width: calc(100% - 2rem);
+    // @media (min-width: $ipad-mini) {
+    //     width: calc(100% - 2rem);
+    // }
 
+    .faq-card {
+        width: 100%;
+
+        @media (min-width: $ipad-mini) {
+            margin-bottom: 2rem;
+            border: 1px solid $border-gray;
+            border-radius: $border-radius;
+            box-shadow: $shadow-main;
+        }
+    }
 
     .faq-heading {
         font-size: $h3-fontsize;
@@ -567,15 +581,23 @@ p {
 
     .q-and-btn-container {
         display: flex;
+        align-items: center;
         gap: 1rem;
         cursor: pointer;
+
+        @media (min-width: $ipad-mini) {
+            justify-content: space-between;
+        }
     }
 
     .q-and-btn-container,
     .answer {
         border: 1px solid $border-gray;
         padding: 1rem 2rem;
-        max-width: $max-width-small;
+
+        @media (min-width: $ipad-mini) {
+            border: none;
+        }
     }
 
 
@@ -583,7 +605,6 @@ p {
         font-size: $M-text;
         font-weight: $medium;
         color: black;
-        max-width: $max-width-small;
 
     }
 
@@ -591,6 +612,14 @@ p {
         font-size: $S-text;
         display: none;
         transition: all 200ms;
+
+
+        @media (min-width: $ipad-mini) {
+
+
+            padding-right: 6rem;
+            padding-bottom: 2rem;
+        }
 
     }
 }
@@ -601,6 +630,10 @@ p {
     display: flex;
     justify-content: center;
     padding: 2rem 0;
+
+    @media (min-width: $ipad-mini) {
+        display: none;
+    }
 
     .contact-btn {
         margin: 2rem;
@@ -673,19 +706,7 @@ p {
     }
 }
 
-.animate-and-show-answer {
 
-    .answer {
-        display: block;
-    }
-
-    .animated-btn {
-        transform: rotate(180deg);
-        transition: all 500ms;
-        background-color: $main-color;
-        color: white;
-    }
-}
 
 footer {
     width: 100%;
@@ -698,6 +719,11 @@ footer {
         padding: 1rem 0;
         font-size: $S-text;
         color: $font-color;
+
+        @media (min-width: $medium-screen) {
+            flex-direction: row;
+            justify-content: center;
+        }
     }
 }
 
@@ -712,36 +738,64 @@ footer {
     h1,
     h2,
     h3 {
-        color: white!important;
+        color: white !important;
     }
 
-    p, span {
-        color: $darkmode-text-white!important;
+    p,
+    span {
+        color: $darkmode-text-white !important;
     }
-    .hero-container{
-        .hero-content{
-            .app-store-container{
-                .app-store, .google-play{
+
+    .hero-container {
+        .hero-content {
+            .app-store-container {
+
+                .app-store,
+                .google-play {
                     background-color: $main-color;
                 }
             }
-            .discover-more{
+
+            .discover-more {
                 color: white;
-                .down-arrow{
+
+                .down-arrow {
                     background-color: $darkmode-buttons;
                 }
             }
         }
     }
+
     .down-arrow {
         background-color: $darkmode-buttons;
     }
 
-    .feature-icon{
+    .feature-icon {
         background-color: $darkmode-buttons;
     }
 
-    .app-showcase-wrapper, .contact-form-wrapper{
+    .app-showcase-wrapper,
+    .contact-form-wrapper {
         background-color: rgba(255, 255, 255, 0.076);
+    }
+
+    .question {
+        font-weight: $bold;
+    }
+}
+
+
+.animate-and-show-answer {
+
+
+    .answer {
+        display: block;
+    }
+
+    .animated-btn {
+        transform: rotate(180deg);
+        transition: all 500ms;
+        background-color: $main-color;
+        color: white;
     }
 }

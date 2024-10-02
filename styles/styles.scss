@@ -3,7 +3,6 @@
 @import "mixins";
 @import "utility_classes";
 @import "slider";
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 
 .dark-mode {
@@ -15,6 +14,10 @@ body {
     font-optical-sizing: auto;
     font-weight: $regular;
     font-style: normal;
+
+    main {
+        min-height: 100vh;
+    }
 }
 
 a {
@@ -40,8 +43,21 @@ p {
     margin: $center-object;
     @include container-sizes;
 
-    .logo {
-        height: 4.5rem;
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media (min-width: $big-screen) {
+            height: 4.5rem;
+            justify-content: center;
+            gap: 1rem;
+
+            .logo-img {
+                height: 4.5rem;
+                width: 4.5rem;
+            }
+        }
     }
 
     .main-navigation {
@@ -58,6 +74,10 @@ p {
         justify-content: center;
         text-decoration: none;
         color: black;
+
+        span {
+            font-size: 30px;
+        }
     }
 
 
@@ -250,6 +270,10 @@ p {
                 font-size: $S-text;
                 color: $text-color-gray;
 
+                .down-arrow {
+                    background-color: white;
+                }
+
 
                 @media (min-width: $big-screen) {
                     grid-column: 2/3;
@@ -383,7 +407,6 @@ p {
 
     .feature-description {
         font-size: $M-text;
-        color: $text-color-gray;
         max-width: 40ch;
 
         @media (min-width: $ipad-mini) {
@@ -398,7 +421,7 @@ p {
 
     .feature-icon {
         padding: 1.8rem;
-        background-color: rgb(185, 185, 185);
+        background-color: #F3F6FF;
         display: flex;
         align-self: first baseline;
         justify-content: center;
@@ -496,7 +519,7 @@ p {
             max-width: 40ch;
             text-align: center;
             font-size: $M-text;
-            color: $text-color-gray;
+
 
             @media (min-width: $ipad-mini) {
                 max-width: 50ch;
@@ -531,7 +554,6 @@ p {
 
     .faq-text {
         font-size: $M-text;
-        color: $text-color-gray;
         text-align: center;
         max-width: 25ch;
         padding-bottom: 2rem;
@@ -542,12 +564,13 @@ p {
     .q-and-btn-container {
         display: flex;
         gap: 1rem;
+        cursor: pointer;
     }
 
     .q-and-btn-container,
     .answer {
         border: 1px solid $border-gray;
-        padding: 1rem;
+        padding: 1rem 2rem;
         max-width: $max-width-small;
     }
 
@@ -562,9 +585,9 @@ p {
 
     .answer {
         font-size: $S-text;
-        color: $text-color-gray;
         display: none;
         transition: all 200ms;
+
     }
 }
 
@@ -578,11 +601,14 @@ p {
     .contact-btn {
         margin: 2rem;
         padding: 1rem 3rem;
+        font-size: $M-text;
+        font-weight: $bold;
     }
 }
 
 .contact-form-wrapper {
     background-color: $background-secondary;
+
     .contact-form {
         @include container-sizes;
 
@@ -595,9 +621,11 @@ p {
             justify-content: center;
             margin-bottom: 2rem;
 
+
             h3 {
                 text-align: center;
                 max-width: 20ch;
+                font-size: $XL-text;
             }
         }
 
@@ -620,7 +648,7 @@ p {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    left: .5rem;
+                    left: 0rem;
                     height: 2rem;
                     width: 2rem;
                     background-size: contain;
@@ -633,6 +661,8 @@ p {
 
             .submit-btn {
                 border-radius: 0 0.5rem 0.5rem 0;
+                font-size: $M-text;
+                font-weight: $bold;
             }
         }
     }
@@ -654,7 +684,8 @@ p {
 
 footer {
     width: 100%;
-    .footer-container{
+
+    .footer-container {
         @include container-sizes;
         margin: $center-object;
         @include flex-column-center;

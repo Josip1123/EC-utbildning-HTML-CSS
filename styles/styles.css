@@ -2,7 +2,6 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 *,
 *::before,
 *::after {
@@ -190,6 +189,9 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+body main {
+  min-height: 100vh;
+}
 
 a {
   all: unset;
@@ -228,8 +230,21 @@ p {
     max-width: 1320px;
   }
 }
-.header-container .logo {
-  height: 4.5rem;
+.header-container .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media (min-width: 1200px) {
+  .header-container .logo-container {
+    height: 4.5rem;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .header-container .logo-container .logo-img {
+    height: 4.5rem;
+    width: 4.5rem;
+  }
 }
 .header-container .main-navigation {
   display: none;
@@ -243,6 +258,9 @@ p {
   justify-content: center;
   text-decoration: none;
   color: black;
+}
+.header-container .mobile-menu span {
+  font-size: 30px;
 }
 @media (min-width: 768px) {
   .header-container {
@@ -440,6 +458,9 @@ p {
   font-size: 14px;
   color: #585C7B;
 }
+.hero-wrapper-bg .hero-container .hero-content .discover-more .down-arrow {
+  background-color: white;
+}
 @media (min-width: 1200px) {
   .hero-wrapper-bg .hero-container .hero-content .discover-more {
     grid-column: 2/3;
@@ -586,7 +607,6 @@ p {
 }
 .app-features-container .feature-description {
   font-size: 16px;
-  color: #585C7B;
   max-width: 40ch;
 }
 @media (min-width: 768px) {
@@ -599,7 +619,7 @@ p {
 }
 .app-features-container .feature-icon {
   padding: 1.8rem;
-  background-color: rgb(185, 185, 185);
+  background-color: #F3F6FF;
   display: flex;
   align-self: first baseline;
   justify-content: center;
@@ -703,7 +723,6 @@ p {
   max-width: 40ch;
   text-align: center;
   font-size: 16px;
-  color: #585C7B;
 }
 @media (min-width: 768px) {
   .app-showcase-wrapper .app-showcase-container .showcase-text {
@@ -751,7 +770,6 @@ p {
 }
 .faq-container .faq-text {
   font-size: 16px;
-  color: #585C7B;
   text-align: center;
   max-width: 25ch;
   padding-bottom: 2rem;
@@ -759,11 +777,12 @@ p {
 .faq-container .q-and-btn-container {
   display: flex;
   gap: 1rem;
+  cursor: pointer;
 }
 .faq-container .q-and-btn-container,
 .faq-container .answer {
   border: 1px solid #E2E5F1;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 450px;
 }
 .faq-container .question {
@@ -774,7 +793,6 @@ p {
 }
 .faq-container .answer {
   font-size: 14px;
-  color: #585C7B;
   display: none;
   transition: all 200ms;
 }
@@ -804,6 +822,8 @@ p {
 .contact-btn-wrapper .contact-btn {
   margin: 2rem;
   padding: 1rem 3rem;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .contact-form-wrapper {
@@ -838,6 +858,7 @@ p {
 .contact-form-wrapper .contact-form .form-heading h3 {
   text-align: center;
   max-width: 20ch;
+  font-size: 20px;
 }
 .contact-form-wrapper .contact-form form .form-content {
   display: flex;
@@ -856,7 +877,7 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0.5rem;
+  left: 0rem;
   height: 2rem;
   width: 2rem;
   background-size: contain;
@@ -866,6 +887,8 @@ p {
 }
 .contact-form-wrapper .contact-form form .submit-btn {
   border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .animate-and-show-answer .answer {

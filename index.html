@@ -3,22 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Finance app that is going to makeyour life easier"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
         <link rel="stylesheet" href="./styles/styles.css" />
-        <title>Silicon</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./styles/img/favicon.svg"
+            height="45"
+            width="45"
+        />
+        <title>Silicon Finance</title>
     </head>
     <body>
         <header>
             <div class="header-container">
-                <a href="#"
-                    ><img
-                        src="./styles/img/Logo.svg"
-                        alt="Silicon Logo"
-                        class="logo"
-                /></a>
+                <div class="logo-container">
+                    <a href="#"
+                        ><img
+                            src="./styles/img/Logo.svg"
+                            alt="Silicon Brand Logo"
+                            class="logo-img"
+                        />
+                    </a>
+                    <a href="" class="logo-text">
+                        <h2>
+                            Silicon
+                        </h2>
+                    </a>
+
+                </div>
                 <nav class="main-navigation">
                     <a href="#">Features</a>
                 </nav>
@@ -69,6 +95,8 @@
                             <source
                                 media="(min-width: 1200px)"
                                 srcset="./styles/img/hero-img.webp"
+                                height="700"
+                                width="760"
                             />
 
                             <source
@@ -78,7 +106,7 @@
 
                             <img
                                 src="./styles/img/hero-img.webp"
-                                alt="Image of a phone"
+                                alt="Image of a phone with silicon app"
                             />
                         </picture>
                     </aside>
@@ -86,22 +114,22 @@
             </div>
             <section class="brands-container">
                 <div class="brand-logo">
-                    <img src="./styles/img/01-brands.svg" alt="" />
+                    <img src="./styles/img/01-brands.svg" alt="Brand Name x" />
                 </div>
                 <div class="brand-logo">
-                    <img src="./styles/img/02-brands.svg" alt="" />
+                    <img src="./styles/img/02-brands.svg" alt="Brand Name x" />
                 </div>
                 <div class="brand-logo">
-                    <img src="./styles/img/03-brands.svg" alt="" />
+                    <img src="./styles/img/03-brands.svg" alt="Brand Name x" />
                 </div>
                 <div class="brand-logo">
-                    <img src="./styles/img/04-brands.svg" alt="" />
+                    <img src="./styles/img/04-brands.svg" alt="Brand Name x" />
                 </div>
                 <div class="brand-logo">
-                    <img src="./styles/img/05-brands.svg" alt="" />
+                    <img src="./styles/img/05-brands.svg" alt="Brand Name x" />
                 </div>
                 <div class="brand-logo">
-                    <img src="./styles/img/06-brands.svg" alt="" />
+                    <img src="./styles/img/06-brands.svg" alt="Brand Name x" />
                 </div>
             </section>
 
@@ -180,7 +208,7 @@
                     <img
                         src="./styles/img/app-features-img.webp"
                         loading="lazy"
-                        alt=""
+                        alt="Image of app features"
                     />
                 </aside>
             </section>
@@ -192,18 +220,19 @@
                             class="showcase-img"
                             src="./styles/img/app-showcase-screens-1.webp"
                             loading="lazy"
+                            alt="Showcase feature 1"
                         />
                         <img
                             class="showcase-img"
                             src="./styles/img/app-showcase-screens-2.webp"
                             loading="lazy"
-                            alt=""
+                            alt="Showcase feature 2"
                         />
                         <img
                             class="showcase-img"
                             src="./styles/img/app-showcase-screens-3.webp"
                             loading="lazy"
-                            alt=""
+                            alt="howcase feature 3"
                         />
                     </div>
                     <h5>Transfers to people from your contact list</h5>
@@ -385,7 +414,11 @@
                 <section class="contact-form">
                     <div class="form-heading">
                         <div class="notification-img-container">
-                            <img src="./styles/img/bell-icon.svg" alt="" />
+                            <img
+                                src="./styles/img/bell-icon.svg"
+                                loading="lazy"
+                                alt="Ring bell icon"
+                            />
                         </div>
                         <h3>Subscribe to our newsletter</h3>
                     </div>
@@ -396,7 +429,9 @@
                                 class="email-input"
                                 placeholder="example@email.com"
                             />
-                            <button class="submit-btn main-btn">Submit</button>
+                            <button class="submit-btn main-btn">
+                                Subscribe
+                            </button>
                         </div>
                     </form>
                 </section>

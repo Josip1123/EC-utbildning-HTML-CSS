@@ -397,6 +397,10 @@ p {
 
     .app-features-heading {
         font-size: $h3-fontsize;
+
+        @media (min-width: $big-screen) {
+            justify-self: flex-start;
+        }
     }
 
     .app-features-heading-text {
@@ -548,14 +552,66 @@ p {
 .faq-container {
     @include container-sizes;
     @include flex-column-center;
-    margin: $center-object;
+    margin: 2rem auto;
     width: calc(100% - 2rem);
-    // @media (min-width: $ipad-mini) {
-    //     width: calc(100% - 2rem);
-    // }
+
+    @media (min-width: $big-screen) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 2rem 4rem;
+        align-items: start;
+        padding-top: 3rem;
+    }
+
+
+
+    .faq-heading-container {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $big-screen) {
+            grid-column: 1/2;
+            text-align: start;
+        }
+
+        .faq-heading {
+            font-size: $h3-fontsize;
+            padding: 2rem 1rem;
+
+            @media (min-width: $big-screen) {
+                font-size: $h2-fontsize;
+                padding: 0 0 2rem 0;
+                max-width: 15ch;
+            }
+        }
+
+        .faq-text {
+            font-size: $L-text;
+            margin: $center-object;
+            max-width: 25ch;
+            padding-bottom: 2rem;
+
+            @media (min-width: $big-screen) {
+                margin: 0;
+            }
+        }
+    }
+
+    .faq-cards-container {
+        width: 100%;
+
+        @media (min-width: $big-screen) {
+            grid-column: 2/3;
+            grid-row: 1/-1;
+        }
+    }
 
     .faq-card {
         width: 100%;
+
 
         @media (min-width: $ipad-mini) {
             margin-bottom: 2rem;
@@ -564,21 +620,6 @@ p {
             box-shadow: $shadow-main;
         }
     }
-
-    .faq-heading {
-        font-size: $h3-fontsize;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .faq-text {
-        font-size: $M-text;
-        text-align: center;
-        max-width: 25ch;
-        padding-bottom: 2rem;
-    }
-
-
 
     .q-and-btn-container {
         display: flex;
@@ -623,6 +664,67 @@ p {
         }
 
     }
+
+    // shows only on tablet and desktop
+    .contact-medium-and-large {
+        display: none;
+        width: 100%;
+
+        @media (min-width: $big-screen) {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+
+        @media (min-width: $ipad-mini) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+
+            .contact-phone,
+            .contact-chat {
+                border: 1px solid $border-gray;
+                border-radius: $border-radius;
+                padding: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+                font-size: $XL-text;
+
+                .material-symbols-outlined {
+                    font-size: 2.5rem;
+                    font-weight: $bold;
+                }
+            }
+
+            .contact-phone {
+                color: $main-color;
+            }
+
+            .contact-chat {
+                color: green;
+            }
+
+            .contact-us-via-phone::after {
+                content: '\2192';
+                padding-left: .5rem;
+                font-weight: $bold;
+                font-size: 1.2rem;
+
+            }
+
+            .contact-us-via-chat::after {
+                content: '\2192';
+                padding-left: .5rem;
+                font-weight: $bold;
+                font-size: 1.2rem;
+
+            }
+
+        }
+    }
 }
 
 .contact-btn-wrapper {
@@ -644,18 +746,28 @@ p {
     }
 }
 
+
+
 .contact-form-wrapper {
     background-color: $background-secondary;
 
+    @media (min-width: $ipad-mini) {
+        background-color: transparent;
+    }
+
     .contact-form {
+        border-radius: $border-radius;
         @include container-sizes;
-        padding: 3rem 0;
+        padding: 3rem 1rem;
         margin: $center-object;
-        @media (min-width: $ipad-mini){
+
+        @media (min-width: $ipad-mini) {
+            background-color: $background-secondary;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-inline: 2rem;
+            width: calc(100% - 2rem);
+
         }
 
         .form-heading {
@@ -663,7 +775,8 @@ p {
             align-items: center;
             justify-content: center;
             margin-bottom: 2rem;
-            @media (min-width: $ipad-mini){
+
+            @media (min-width: $ipad-mini) {
                 margin-bottom: 0;
                 gap: 2rem;
             }
@@ -673,7 +786,8 @@ p {
                 text-align: center;
                 max-width: 20ch;
                 font-size: $XL-text;
-                @media (min-width: $ipad-mini){
+
+                @media (min-width: $ipad-mini) {
                     text-align: start;
                 }
             }
@@ -683,29 +797,35 @@ p {
             .form-content {
                 display: flex;
                 justify-content: center;
-                position: relative;
-                max-width: 375px;
+                width: 100%;
                 margin: $center-object;
 
                 .email-input {
-                    display: block;
-                    padding: 1rem 0 1rem 2.5rem;
-                    border: none;
-                    border-radius: 0.5rem 0 0 0.5rem;
+                    position: relative;
+
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 1rem;
+                        height: 2rem;
+                        width: 2rem;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-image: url("./img/mail-icon.svg");
+                    }
                 }
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 0rem;
-                    height: 2rem;
-                    width: 2rem;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-image: url("./img/mail-icon.svg");
+                input {
+                    display: block;
+                    height: 100%;
+                    border-radius: 0.5rem 0 0 0.5rem;
+                    padding-inline: 2.5rem;
+                    text-align: center;
+                    border: none;
                 }
             }
 
@@ -714,6 +834,7 @@ p {
                 border-radius: 0 0.5rem 0.5rem 0;
                 font-size: $M-text;
                 font-weight: $bold;
+                padding: 1rem;
             }
         }
     }
@@ -791,9 +912,11 @@ footer {
     .contact-form-wrapper {
         background-color: rgba(255, 255, 255, 0.076);
     }
+
     .faq-card {
-        
+
         background-color: $darkmode-buttons;
+
         @media (min-width: $ipad-mini) {
             border: none;
         }
@@ -801,6 +924,28 @@ footer {
 
     .question {
         font-weight: $bold;
+    }
+
+    .phone-icon {
+        color: $main-color !important;
+    }
+
+    .chat-icon {
+        color: green !important;
+    }
+
+    .contact-phone,
+    .contact-chat {
+        background-color: $darkmode-buttons;
+    }
+
+    .contact-form {
+
+
+        @media (min-width: $ipad-mini) {
+            background-color: transparent;
+
+        }
     }
 }
 

@@ -547,7 +547,47 @@ p {
     }
 
 }
-
+// only on desktop
+.testemonial-wrapper{
+    background-color: $background-secondary;
+    padding: 2rem 0;
+}
+.client-testemonial{
+    display: none;
+    @media (min-width: $big-screen) {
+        display: flex;
+        gap: 2rem;
+        @include container-sizes;
+        width: calc(100% - 2rem);
+        margin: 5rem auto;
+        h2{
+            max-width: 15ch;
+        }
+        .client-card{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 1rem;
+            padding: 2rem;
+            border: 1px solid $border-gray;
+            border-radius: $border-radius;
+            background-color: white;
+            box-shadow: $shadow-main;
+            .review{
+                max-width: 40ch;
+            }
+            .user-profile{
+                display: flex;
+                gap: 0.5rem;
+            }
+        }
+        .quotes-icon{
+            position: absolute;
+            top: -2rem;
+        }
+    }
+}
 
 .faq-container {
     @include container-sizes;
@@ -913,9 +953,18 @@ footer {
         background-color: rgba(255, 255, 255, 0.076);
     }
 
+    .testemonial-wrapper {
+        background-color:  rgba(255, 255, 255, 0.076);
+
+    }
+    .client-card{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
     .faq-card {
 
-        background-color: $darkmode-buttons;
+        background-color:  rgba(255, 255, 255, 0.076);
 
         @media (min-width: $ipad-mini) {
             border: none;
@@ -936,7 +985,7 @@ footer {
 
     .contact-phone,
     .contact-chat {
-        background-color: $darkmode-buttons;
+        background-color:  rgba(255, 255, 255, 0.076);
     }
 
     .contact-form {

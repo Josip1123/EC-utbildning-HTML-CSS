@@ -749,6 +749,67 @@ p {
   }
 }
 
+.testemonial-wrapper {
+  background-color: #F3F6FF;
+  padding: 2rem 0;
+}
+
+.client-testemonial {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .client-testemonial {
+    display: flex;
+    gap: 2rem;
+    max-width: 450px;
+    width: calc(100% - 2rem);
+    margin: 5rem auto;
+  }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+  .client-testemonial {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) and (min-width: 900px) {
+  .client-testemonial {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .client-testemonial {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1200px) {
+  .client-testemonial h2 {
+    max-width: 15ch;
+  }
+  .client-testemonial .client-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    padding: 2rem;
+    border: 1px solid #E2E5F1;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.404);
+  }
+  .client-testemonial .client-card .review {
+    max-width: 40ch;
+  }
+  .client-testemonial .client-card .user-profile {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .client-testemonial .quotes-icon {
+    position: absolute;
+    top: -2rem;
+  }
+}
+
 .faq-container {
   max-width: 450px;
   display: flex;
@@ -1126,8 +1187,15 @@ footer .footer-container {
 .dark-mode .contact-form-wrapper {
   background-color: rgba(255, 255, 255, 0.076);
 }
+.dark-mode .testemonial-wrapper {
+  background-color: rgba(255, 255, 255, 0.076);
+}
+.dark-mode .client-card {
+  background-color: transparent;
+  box-shadow: none;
+}
 .dark-mode .faq-card {
-  background-color: rgba(88, 92, 123, 0.2705882353);
+  background-color: rgba(255, 255, 255, 0.076);
 }
 @media (min-width: 768px) {
   .dark-mode .faq-card {
@@ -1145,7 +1213,7 @@ footer .footer-container {
 }
 .dark-mode .contact-phone,
 .dark-mode .contact-chat {
-  background-color: rgba(88, 92, 123, 0.2705882353);
+  background-color: rgba(255, 255, 255, 0.076);
 }
 @media (min-width: 768px) {
   .dark-mode .contact-form {

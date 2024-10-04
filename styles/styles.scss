@@ -547,23 +547,122 @@ p {
     }
 
 }
+
 // only on desktop
-.testemonial-wrapper{
+
+
+.payments {
+
+    display: none;
+    @include container-sizes;
+    margin: $center-object;
+    width: calc(100% - 2rem);
+    padding: 4rem 0;
+
+    @media (min-width: $big-screen) {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+
+    }
+
+    .payment-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+       
+    }
+
+    .make-payments,
+    .receive-payments {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        h3 {
+            font-size: $h3-fontsize;
+            max-width: 20ch;
+        }
+
+        .learn-more-payments {
+            width: 6.5rem;
+            text-align: center;
+        }
+    }
+
+    .receive-payments {
+        .international-features {
+            display: flex;
+
+            .feature {
+                display: flex;
+                flex-direction: column;
+                flex: 0 0 50%;
+                gap: 1rem;
+            }
+        }
+    }
+
+    .transfer-perks-list {
+
+        list-style-position: inside;
+        line-height: 2rem;
+        padding-left: 0;
+        list-style-image: url(./img/bx-check-circle.svg);
+
+
+    }
+
+
+    .payment-icon-1,
+    .payment-icon-2 {
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        height: 3rem;
+        width: 3rem;
+        background-color: #F3F6FF;
+        border-radius: $border-radius;
+    }
+
+    .payment-icon-1 {
+        background-image: url(./img/gradient-icon-1.svg);
+    }
+
+    .payment-icon-2 {
+        background-image: url(./img/gradient-icon-5.svg);
+    }
+
+}
+
+.testemonial-wrapper {
+    display: none;
     background-color: $background-secondary;
     padding: 2rem 0;
+
+    @media (min-width: $big-screen) {
+        display: block;
+    }
 }
-.client-testemonial{
+
+.client-testemonial {
     display: none;
+
     @media (min-width: $big-screen) {
         display: flex;
         gap: 2rem;
         @include container-sizes;
         width: calc(100% - 2rem);
         margin: 5rem auto;
-        h2{
+
+        h2 {
             max-width: 15ch;
         }
-        .client-card{
+
+        .client-card {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -574,15 +673,18 @@ p {
             border-radius: $border-radius;
             background-color: white;
             box-shadow: $shadow-main;
-            .review{
+
+            .review {
                 max-width: 40ch;
             }
-            .user-profile{
+
+            .user-profile {
                 display: flex;
                 gap: 0.5rem;
             }
         }
-        .quotes-icon{
+
+        .quotes-icon {
             position: absolute;
             top: -2rem;
         }
@@ -911,7 +1013,8 @@ footer {
 
     h1,
     h2,
-    h3 {
+    h3,
+    li {
         color: white !important;
     }
 
@@ -948,23 +1051,29 @@ footer {
         background-color: $darkmode-buttons;
     }
 
+    .payment-icon-1,
+    .payment-icon-2 {
+        background-color: $darkmode-buttons;
+    }
+
     .app-showcase-wrapper,
     .contact-form-wrapper {
-        background-color: rgba(255, 255, 255, 0.076);
+        background-color: $background-secondary-dark;
     }
 
     .testemonial-wrapper {
-        background-color:  rgba(255, 255, 255, 0.076);
+        background-color: $background-secondary-dark;
 
     }
-    .client-card{
+
+    .client-card {
         background-color: transparent;
         box-shadow: none;
     }
 
     .faq-card {
 
-        background-color:  rgba(255, 255, 255, 0.076);
+        background-color: $background-secondary-dark;
 
         @media (min-width: $ipad-mini) {
             border: none;
@@ -985,7 +1094,7 @@ footer {
 
     .contact-phone,
     .contact-chat {
-        background-color:  rgba(255, 255, 255, 0.076);
+        background-color: $background-secondary-dark;
     }
 
     .contact-form {

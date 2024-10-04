@@ -749,9 +749,99 @@ p {
   }
 }
 
+.payments {
+  display: none;
+  max-width: 450px;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  padding: 4rem 0;
+}
+@media (min-width: 768px) {
+  .payments {
+    max-width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .payments {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  .payments {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1200px) {
+  .payments {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+}
+.payments .payment-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.payments .make-payments,
+.payments .receive-payments {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.payments .make-payments h3,
+.payments .receive-payments h3 {
+  font-size: 28px;
+  max-width: 20ch;
+}
+.payments .make-payments .learn-more-payments,
+.payments .receive-payments .learn-more-payments {
+  width: 6.5rem;
+  text-align: center;
+}
+.payments .receive-payments .international-features {
+  display: flex;
+}
+.payments .receive-payments .international-features .feature {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  gap: 1rem;
+}
+.payments .transfer-perks-list {
+  list-style-position: inside;
+  line-height: 2rem;
+  padding-left: 0;
+  list-style-image: url(./img/bx-check-circle.svg);
+}
+.payments .payment-icon-1,
+.payments .payment-icon-2 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height: 3rem;
+  width: 3rem;
+  background-color: #F3F6FF;
+  border-radius: 1rem;
+}
+.payments .payment-icon-1 {
+  background-image: url(./img/gradient-icon-1.svg);
+}
+.payments .payment-icon-2 {
+  background-image: url(./img/gradient-icon-5.svg);
+}
+
 .testemonial-wrapper {
+  display: none;
   background-color: #F3F6FF;
   padding: 2rem 0;
+}
+@media (min-width: 1200px) {
+  .testemonial-wrapper {
+    display: block;
+  }
 }
 
 .client-testemonial {
@@ -1160,7 +1250,8 @@ footer .footer-container {
 }
 .dark-mode h1,
 .dark-mode h2,
-.dark-mode h3 {
+.dark-mode h3,
+.dark-mode li {
   color: white !important;
 }
 .dark-mode p,
@@ -1181,6 +1272,10 @@ footer .footer-container {
   background-color: rgba(88, 92, 123, 0.2705882353);
 }
 .dark-mode .feature-icon {
+  background-color: rgba(88, 92, 123, 0.2705882353);
+}
+.dark-mode .payment-icon-1,
+.dark-mode .payment-icon-2 {
   background-color: rgba(88, 92, 123, 0.2705882353);
 }
 .dark-mode .app-showcase-wrapper,

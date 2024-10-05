@@ -20,13 +20,20 @@ body {
 }
 
 a:focus-visible,
-button:focus-visible,
-input:focus-visible {
+button:focus-visible {
     @include outline-focus;
 
     &:active {
         outline: none;
     }
+}
+input:focus-visible, .submit-btn:focus-visible{
+    outline: 2px solid $main-color;
+    outline-offset: -2px;
+}
+
+.submit-btn:focus-visible {
+    outline-color: black;
 }
 
 a {
@@ -1024,7 +1031,7 @@ p {
                         display: block;
                         height: 100%;
                         border-radius: 0.5rem 0 0 0.5rem;
-                        padding-inline: 2.5rem;
+                        padding-left: 1rem;
                         text-align: center;
                         border: none;
                         width: 100%;
@@ -1103,6 +1110,9 @@ footer {
     span {
         color: $darkmode-text-white !important;
     }
+    .main-navigation {
+        color: white;
+    }
 
     .hero-container {
         .hero-content {
@@ -1137,8 +1147,7 @@ footer {
         background-color: $darkmode-buttons;
     }
 
-    .app-showcase-wrapper,
-    .contact-form-wrapper {
+    .app-showcase-wrapper {
         background-color: $background-secondary-dark;
     }
 
@@ -1178,13 +1187,11 @@ footer {
         background-color: $background-secondary-dark;
     }
 
-    .contact-form {
-
-
-        @media (min-width: $ipad-mini) {
-            background-color: transparent;
-
-        }
+    .form-container {
+            background-color: $background-secondary-dark;
+            .submit-btn:focus-visible {
+                outline-color: orange;
+            }
     }
 }
 

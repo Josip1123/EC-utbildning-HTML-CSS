@@ -192,16 +192,23 @@ body main {
 }
 
 a:focus-visible,
-button:focus-visible,
-input:focus-visible {
+button:focus-visible {
   outline: 2px solid #5e60f5;
   outline-offset: 0.4rem;
   border-radius: 1rem;
 }
 a:focus-visible:active,
-button:focus-visible:active,
-input:focus-visible:active {
+button:focus-visible:active {
   outline: none;
+}
+
+input:focus-visible, .submit-btn:focus-visible {
+  outline: 2px solid #5e60f5;
+  outline-offset: -2px;
+}
+
+.submit-btn:focus-visible {
+  outline-color: black;
 }
 
 a {
@@ -1220,7 +1227,7 @@ p {
   display: block;
   height: 100%;
   border-radius: 0.5rem 0 0 0.5rem;
-  padding-inline: 2.5rem;
+  padding-left: 1rem;
   text-align: center;
   border: none;
   width: 100%;
@@ -1295,6 +1302,9 @@ footer .footer-container {
 .dark-mode span {
   color: rgba(255, 255, 255, 0.664) !important;
 }
+.dark-mode .main-navigation {
+  color: white;
+}
 .dark-mode .hero-container .hero-content .app-store-container .app-store,
 .dark-mode .hero-container .hero-content .app-store-container .google-play {
   background-color: #5e60f5;
@@ -1315,8 +1325,7 @@ footer .footer-container {
 .dark-mode .payment-icon-2 {
   background-color: rgba(88, 92, 123, 0.2705882353);
 }
-.dark-mode .app-showcase-wrapper,
-.dark-mode .contact-form-wrapper {
+.dark-mode .app-showcase-wrapper {
   background-color: rgba(255, 255, 255, 0.076);
 }
 .dark-mode .testemonial-wrapper {
@@ -1347,10 +1356,11 @@ footer .footer-container {
 .dark-mode .contact-chat {
   background-color: rgba(255, 255, 255, 0.076);
 }
-@media (min-width: 768px) {
-  .dark-mode .contact-form {
-    background-color: transparent;
-  }
+.dark-mode .form-container {
+  background-color: rgba(255, 255, 255, 0.076);
+}
+.dark-mode .form-container .submit-btn:focus-visible {
+  outline-color: orange;
 }
 
 .animate-and-show-answer .answer {

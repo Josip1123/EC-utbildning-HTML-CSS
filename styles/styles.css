@@ -225,7 +225,7 @@ p {
 }
 @media (min-width: 768px) {
   .header-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -312,7 +312,7 @@ p {
 }
 @media (min-width: 768px) {
   .hero-wrapper-bg .hero-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -531,7 +531,7 @@ p {
 }
 @media (min-width: 1200px) and (min-width: 768px) {
   .brands-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 1200px) and (min-width: 900px) {
@@ -559,7 +559,7 @@ p {
 }
 @media (min-width: 768px) {
   .app-features-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -704,7 +704,7 @@ p {
 }
 @media (min-width: 768px) {
   .app-showcase-wrapper .app-showcase-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -774,7 +774,7 @@ p {
 }
 @media (min-width: 768px) {
   .payments {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -875,7 +875,7 @@ p {
 }
 @media (min-width: 1200px) and (min-width: 768px) {
   .client-testemonial {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 1200px) and (min-width: 900px) {
@@ -940,11 +940,11 @@ p {
   flex-direction: column;
   align-items: center;
   margin: 2rem auto;
-  padding-inline: 1rem;
+  width: calc(100% - 2rem);
 }
 @media (min-width: 768px) {
   .faq-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -1121,7 +1121,7 @@ p {
 }
 @media (min-width: 768px) {
   .contact-btn-wrapper {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
@@ -1147,88 +1147,91 @@ p {
 }
 
 .contact-form-wrapper {
-  background-color: #F3F6FF;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
-@media (min-width: 768px) {
-  .contact-form-wrapper {
-    background-color: transparent;
-  }
-}
-.contact-form-wrapper .contact-form {
+.contact-form-wrapper .form-container {
+  background-color: #F3F6FF;
   border-radius: 1rem;
   max-width: 450px;
-  padding: 3rem 1rem;
-  flex: 1;
+  padding: 3rem 2rem;
+  margin-inline: -11rem;
+  width: calc(100% - 2rem);
 }
 @media (min-width: 768px) {
-  .contact-form-wrapper .contact-form {
-    max-width: 100%;
+  .contact-form-wrapper .form-container {
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {
-  .contact-form-wrapper .contact-form {
+  .contact-form-wrapper .form-container {
     max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
-  .contact-form-wrapper .contact-form {
+  .contact-form-wrapper .form-container {
     max-width: 1320px;
   }
 }
 @media (min-width: 768px) {
-  .contact-form-wrapper .contact-form {
-    background-color: #F3F6FF;
+  .contact-form-wrapper .form-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 }
 @media (min-width: 1200px) {
-  .contact-form-wrapper .contact-form {
+  .contact-form-wrapper .form-container {
     justify-content: space-around;
   }
 }
-.contact-form-wrapper .contact-form .form-heading {
+.contact-form-wrapper .form-container .form-heading {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .contact-form-wrapper .contact-form .form-heading {
+  .contact-form-wrapper .form-container .form-heading {
     margin-bottom: 0;
     gap: 2rem;
   }
 }
-.contact-form-wrapper .contact-form .form-heading h2 {
+.contact-form-wrapper .form-container .form-heading h2 {
   text-align: center;
   max-width: 20ch;
   font-size: 24px;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .contact-form-wrapper .contact-form .form-heading h2 {
+  .contact-form-wrapper .form-container .form-heading h2 {
     text-align: start;
   }
 }
-.contact-form-wrapper .contact-form form .form-content {
+.contact-form-wrapper .form-container form .form-content {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
 }
-.contact-form-wrapper .contact-form form .form-content .email-input {
+.contact-form-wrapper .form-container form .form-content .email-input {
   position: relative;
 }
-.contact-form-wrapper .contact-form form .form-content .email-input::before {
+.contact-form-wrapper .form-container form .form-content .email-input input {
+  display: block;
+  height: 100%;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding-inline: 2.5rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+}
+.contact-form-wrapper .form-container form .form-content .email-input::before {
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
+  left: 0.3rem;
   height: 2rem;
   width: 2rem;
   background-size: contain;
@@ -1236,15 +1239,7 @@ p {
   background-position: center;
   background-image: url("./img/mail-icon.svg");
 }
-.contact-form-wrapper .contact-form form .form-content input {
-  display: block;
-  height: 100%;
-  border-radius: 0.5rem 0 0 0.5rem;
-  padding-inline: 2.5rem;
-  text-align: center;
-  border: none;
-}
-.contact-form-wrapper .contact-form form .submit-btn {
+.contact-form-wrapper .form-container form .submit-btn {
   border-radius: 0 0.5rem 0.5rem 0;
   font-size: 16px;
   font-weight: 700;
@@ -1267,7 +1262,7 @@ footer .footer-container {
 }
 @media (min-width: 768px) {
   footer .footer-container {
-    max-width: 100%;
+    max-width: 768px;
   }
 }
 @media (min-width: 900px) {

@@ -16,7 +16,7 @@
     max-width: $max-width-small;
 
     @media (min-width: $ipad-mini) {
-        max-width: 100%;
+        max-width: $ipad-mini;
     }
 
     @media (min-width: $medium-screen) {

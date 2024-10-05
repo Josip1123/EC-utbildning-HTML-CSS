@@ -756,7 +756,7 @@ p {
     @include container-sizes;
     @include flex-column-center;
     margin: 2rem auto;
-    padding-inline: 1rem;
+    width: calc(100% - 2rem);
 
     @media (min-width: $big-screen) {
         display: grid;
@@ -962,26 +962,21 @@ p {
 //sub form start
 
 .contact-form-wrapper {
-    background-color: $background-secondary;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 
 
-    @media (min-width: $ipad-mini) {
-        background-color: transparent;
-    }
-
-    .contact-form {
+    .form-container {
+        background-color: $background-secondary;
         border-radius: $border-radius;
         @include container-sizes;
-        padding: 3rem 1rem;
-        flex: 1;
+        padding: 3rem 2rem;
+        margin-inline: -11rem;
+        width: calc(100% - 2rem);
 
 
         @media (min-width: $ipad-mini) {
-            background-color: $background-secondary;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1020,18 +1015,28 @@ p {
             .form-content {
                 display: flex;
                 justify-content: center;
-                margin: $center-object;
+
 
                 .email-input {
                     position: relative;
 
+                    input {
+                        display: block;
+                        height: 100%;
+                        border-radius: 0.5rem 0 0 0.5rem;
+                        padding-inline: 2.5rem;
+                        text-align: center;
+                        border: none;
+                        width: 100%;
+                        font-size: $M-text;
+                    }
 
                     &::before {
                         content: "";
                         position: absolute;
                         top: 50%;
                         transform: translateY(-50%);
-                        left: 1rem;
+                        left: 0.3rem;
                         height: 2rem;
                         width: 2rem;
                         background-size: contain;
@@ -1039,15 +1044,6 @@ p {
                         background-position: center;
                         background-image: url("./img/mail-icon.svg");
                     }
-                }
-
-                input {
-                    display: block;
-                    height: 100%;
-                    border-radius: 0.5rem 0 0 0.5rem;
-                    padding-inline: 2.5rem;
-                    text-align: center;
-                    border: none;
                 }
             }
 
@@ -1061,7 +1057,6 @@ p {
         }
     }
 }
-
 
 //sub form end
 

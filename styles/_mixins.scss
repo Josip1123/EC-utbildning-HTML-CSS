@@ -27,3 +27,9 @@
         max-width: $max-width-big;
     }
 }
+
+@mixin outline-focus {
+        outline: 2px solid $main-color;
+        outline-offset: 0.4rem;
+        border-radius: $border-radius;
+}

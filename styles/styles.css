@@ -191,12 +191,22 @@ body main {
   min-height: 100vh;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #5e60f5;
+  outline-offset: 0.4rem;
+  border-radius: 1rem;
+}
+a:focus-visible:active,
+button:focus-visible:active,
+input:focus-visible:active {
+  outline: none;
+}
+
 a {
   all: unset;
   cursor: pointer;
-}
-a:focus {
-  outline: 2px solid #5e60f5;
 }
 
 p {
@@ -263,7 +273,8 @@ p {
   color: black;
 }
 .header-container .mobile-menu span {
-  font-size: 30px;
+  font-size: 3rem;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   .header-container {
@@ -337,7 +348,7 @@ p {
 @media (min-width: 768px) {
   .hero-wrapper-bg .hero-container .hero-heading {
     grid-column: 1/3;
-    font-size: 48px;
+    font-size: 56px;
     padding-bottom: 0;
   }
 }
@@ -350,7 +361,7 @@ p {
   .hero-wrapper-bg .hero-container .hero-heading {
     grid-column: 1/1;
     grid-row: 1/2;
-    font-size: 56px;
+    font-size: 48px;
     padding: 5rem 0 1rem 0;
     text-align: start;
   }
@@ -598,11 +609,12 @@ p {
   }
 }
 .app-features-container .app-features-heading {
-  font-size: 28px;
+  font-size: 32px;
 }
 @media (min-width: 1200px) {
   .app-features-container .app-features-heading {
     justify-self: flex-start;
+    font-size: 42px;
   }
 }
 .app-features-container .app-features-heading-text {
@@ -706,7 +718,12 @@ p {
   }
 }
 .app-showcase-wrapper .app-showcase-container .showcase-heading {
-  font-size: 28px;
+  font-size: 32px;
+}
+@media (min-width: 1200px) {
+  .app-showcase-wrapper .app-showcase-container .showcase-heading {
+    font-size: 42px;
+  }
 }
 .app-showcase-wrapper .app-showcase-container .showcase-images-container {
   display: flex;
@@ -740,7 +757,7 @@ p {
 .app-showcase-wrapper .app-showcase-container h3 {
   max-width: 20ch;
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
 }
 @media (min-width: 768px) {
   .app-showcase-wrapper .app-showcase-container h3 {
@@ -753,8 +770,7 @@ p {
   display: none;
   max-width: 450px;
   margin: 0 auto;
-  width: calc(100% - 2rem);
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 @media (min-width: 768px) {
   .payments {
@@ -791,9 +807,9 @@ p {
   flex-direction: column;
   gap: 3rem;
 }
-.payments .make-payments h3,
-.payments .receive-payments h3 {
-  font-size: 28px;
+.payments .make-payments h2,
+.payments .receive-payments h2 {
+  font-size: 32px;
   max-width: 20ch;
 }
 .payments .make-payments .learn-more-payments,
@@ -809,6 +825,7 @@ p {
   flex-direction: column;
   flex: 0 0 50%;
   gap: 1rem;
+  padding-inline: 0.8rem;
 }
 .payments .transfer-perks-list {
   list-style-position: inside;
@@ -852,7 +869,7 @@ p {
     display: flex;
     gap: 2rem;
     max-width: 450px;
-    width: calc(100% - 2rem);
+    padding-inline: 1rem;
     margin: 5rem auto;
   }
 }
@@ -874,7 +891,15 @@ p {
 @media (min-width: 1200px) {
   .client-testemonial h2 {
     max-width: 15ch;
+    font-size: 32px;
   }
+}
+@media (min-width: 1200px) and (min-width: 1200px) {
+  .client-testemonial h2 {
+    font-size: 42px;
+  }
+}
+@media (min-width: 1200px) {
   .client-testemonial .client-card {
     position: relative;
     display: flex;
@@ -889,6 +914,15 @@ p {
   }
   .client-testemonial .client-card .review {
     max-width: 40ch;
+    font-size: 18px;
+  }
+  .client-testemonial .client-card .user-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+  }
+  .client-testemonial .client-card .title {
+    font-size: 14px;
   }
   .client-testemonial .client-card .user-profile {
     display: flex;
@@ -906,7 +940,7 @@ p {
   flex-direction: column;
   align-items: center;
   margin: 2rem auto;
-  width: calc(100% - 2rem);
+  padding-inline: 1rem;
 }
 @media (min-width: 768px) {
   .faq-container {
@@ -946,12 +980,12 @@ p {
   }
 }
 .faq-container .faq-heading-container .faq-heading {
-  font-size: 28px;
+  font-size: 32px;
   padding: 2rem 1rem;
 }
 @media (min-width: 1200px) {
   .faq-container .faq-heading-container .faq-heading {
-    font-size: 32px;
+    font-size: 42px;
     padding: 0 0 2rem 0;
     max-width: 15ch;
   }
@@ -1114,6 +1148,10 @@ p {
 
 .contact-form-wrapper {
   background-color: #F3F6FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .contact-form-wrapper {
@@ -1124,7 +1162,7 @@ p {
   border-radius: 1rem;
   max-width: 450px;
   padding: 3rem 1rem;
-  margin: 0 auto;
+  flex: 1;
 }
 @media (min-width: 768px) {
   .contact-form-wrapper .contact-form {
@@ -1147,7 +1185,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 2rem);
+  }
+}
+@media (min-width: 1200px) {
+  .contact-form-wrapper .contact-form {
+    justify-content: space-around;
   }
 }
 .contact-form-wrapper .contact-form .form-heading {
@@ -1162,20 +1204,20 @@ p {
     gap: 2rem;
   }
 }
-.contact-form-wrapper .contact-form .form-heading h3 {
+.contact-form-wrapper .contact-form .form-heading h2 {
   text-align: center;
   max-width: 20ch;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
-  .contact-form-wrapper .contact-form .form-heading h3 {
+  .contact-form-wrapper .contact-form .form-heading h2 {
     text-align: start;
   }
 }
 .contact-form-wrapper .contact-form form .form-content {
   display: flex;
   justify-content: center;
-  width: 100%;
   margin: 0 auto;
 }
 .contact-form-wrapper .contact-form form .form-content .email-input {

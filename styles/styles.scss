@@ -19,18 +19,26 @@ body {
     }
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    @include outline-focus;
+
+    &:active {
+        outline: none;
+    }
+}
+
 a {
     all: unset;
     cursor: pointer;
-
-    &:focus {
-        outline: 2px solid $main-color;
-    }
 }
 
 p {
     color: $text-color-gray;
 }
+
+// Header section start
 
 .header-container {
     display: grid;
@@ -81,7 +89,8 @@ p {
         color: black;
 
         span {
-            font-size: 30px;
+            font-size: 3rem;
+            font-weight: $bold;
         }
     }
 
@@ -112,6 +121,11 @@ p {
         }
     }
 }
+
+
+// Header end
+
+// Hero section start
 
 .hero-wrapper-bg {
     background: rgb(99, 102, 241);
@@ -150,7 +164,7 @@ p {
 
             @media (min-width: $ipad-mini) {
                 grid-column: 1/3;
-                font-size: $display-5;
+                font-size: $display-4;
                 padding-bottom: 0;
             }
 
@@ -161,7 +175,7 @@ p {
             @media (min-width: $big-screen) {
                 grid-column: 1/1;
                 grid-row: 1/2;
-                font-size: $display-4;
+                font-size: $display-5;
                 padding: 5rem 0 1rem 0;
                 text-align: start;
             }
@@ -311,6 +325,11 @@ p {
 }
 
 
+// hero end
+
+
+// brands section start
+
 .brands-container {
     display: none;
 
@@ -350,7 +369,10 @@ p {
 
 }
 
+// brands end
 
+
+//App features start
 
 .app-features-container {
     max-width: $max-width-small;
@@ -396,10 +418,11 @@ p {
     }
 
     .app-features-heading {
-        font-size: $h3-fontsize;
+        font-size: $h2-fontsize;
 
         @media (min-width: $big-screen) {
             justify-self: flex-start;
+            font-size: $display-6;
         }
     }
 
@@ -490,6 +513,11 @@ p {
     }
 }
 
+
+// app features end
+
+//app showcase start
+
 .app-showcase-wrapper {
     width: 100%;
     background-color: $background-secondary;
@@ -502,7 +530,11 @@ p {
         padding: 4rem 0;
 
         .showcase-heading {
-            font-size: $h3-fontsize;
+            font-size: $h2-fontsize;
+
+            @media (min-width: $big-screen) {
+                font-size: $display-6;
+            }
         }
 
         .showcase-images-container {
@@ -538,7 +570,7 @@ p {
         h3 {
             max-width: 20ch;
             text-align: center;
-            font-size: $h5-fontsize;
+            font-size: $h3-fontsize;
 
             @media (min-width: $ipad-mini) {
                 max-width: fit-content;
@@ -548,6 +580,11 @@ p {
 
 }
 
+// app showcase end
+
+
+
+// Payments start
 // only on desktop
 
 
@@ -556,8 +593,8 @@ p {
     display: none;
     @include container-sizes;
     margin: $center-object;
-    width: calc(100% - 2rem);
-    padding: 4rem 0;
+    // width: calc(100% - 2rem);
+    padding: 4rem 1rem;
 
     @media (min-width: $big-screen) {
         display: grid;
@@ -572,7 +609,6 @@ p {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-       
     }
 
     .make-payments,
@@ -581,9 +617,10 @@ p {
         flex-direction: column;
         gap: 3rem;
 
-        h3 {
-            font-size: $h3-fontsize;
+        h2 {
+            font-size: $h2-fontsize;
             max-width: 20ch;
+
         }
 
         .learn-more-payments {
@@ -601,6 +638,7 @@ p {
                 flex-direction: column;
                 flex: 0 0 50%;
                 gap: 1rem;
+                padding-inline: .8rem;
             }
         }
     }
@@ -638,6 +676,10 @@ p {
 
 }
 
+//payment end
+
+//testemonial start
+
 .testemonial-wrapper {
     display: none;
     background-color: $background-secondary;
@@ -655,11 +697,16 @@ p {
         display: flex;
         gap: 2rem;
         @include container-sizes;
-        width: calc(100% - 2rem);
+        padding-inline: 1rem;
         margin: 5rem auto;
 
         h2 {
             max-width: 15ch;
+            font-size: $h2-fontsize;
+
+            @media (min-width: $big-screen) {
+                font-size: $display-6;
+            }
         }
 
         .client-card {
@@ -676,6 +723,17 @@ p {
 
             .review {
                 max-width: 40ch;
+                font-size: $L-text;
+            }
+
+            .user-name {
+                font-size: $M-text;
+                font-weight: $bold;
+                color: black;
+            }
+
+            .title {
+                font-size: $S-text;
             }
 
             .user-profile {
@@ -691,11 +749,14 @@ p {
     }
 }
 
+//testemonial end
+
+//FAQ start
 .faq-container {
     @include container-sizes;
     @include flex-column-center;
     margin: 2rem auto;
-    width: calc(100% - 2rem);
+    padding-inline: 1rem;
 
     @media (min-width: $big-screen) {
         display: grid;
@@ -720,11 +781,11 @@ p {
         }
 
         .faq-heading {
-            font-size: $h3-fontsize;
+            font-size: $h2-fontsize;
             padding: 2rem 1rem;
 
             @media (min-width: $big-screen) {
-                font-size: $h2-fontsize;
+                font-size: $display-6;
                 padding: 0 0 2rem 0;
                 max-width: 15ch;
             }
@@ -807,7 +868,12 @@ p {
 
     }
 
+    //FAQ end
+
     // shows only on tablet and desktop
+    // contact start
+
+
     .contact-medium-and-large {
         display: none;
         width: 100%;
@@ -889,9 +955,19 @@ p {
 }
 
 
+//contact end
+
+
+
+//sub form start
 
 .contact-form-wrapper {
     background-color: $background-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
 
     @media (min-width: $ipad-mini) {
         background-color: transparent;
@@ -901,15 +977,19 @@ p {
         border-radius: $border-radius;
         @include container-sizes;
         padding: 3rem 1rem;
-        margin: $center-object;
+        flex: 1;
+
 
         @media (min-width: $ipad-mini) {
             background-color: $background-secondary;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: calc(100% - 2rem);
 
+        }
+
+        @media (min-width: $big-screen) {
+            justify-content: space-around;
         }
 
         .form-heading {
@@ -924,10 +1004,11 @@ p {
             }
 
 
-            h3 {
+            h2 {
                 text-align: center;
                 max-width: 20ch;
-                font-size: $XL-text;
+                font-size: $lead-text;
+                font-weight: $bold;
 
                 @media (min-width: $ipad-mini) {
                     text-align: start;
@@ -939,7 +1020,6 @@ p {
             .form-content {
                 display: flex;
                 justify-content: center;
-                width: 100%;
                 margin: $center-object;
 
                 .email-input {
@@ -983,6 +1063,10 @@ p {
 }
 
 
+//sub form end
+
+
+//Footer start
 
 footer {
     width: 100%;
@@ -1003,6 +1087,8 @@ footer {
     }
 }
 
+
+//footer end
 
 
 
@@ -1107,6 +1193,9 @@ footer {
     }
 }
 
+//darkmode end
+
+//animation
 
 .animate-and-show-answer {
 
@@ -1122,3 +1211,5 @@ footer {
         color: white;
     }
 }
+
+//animatio end

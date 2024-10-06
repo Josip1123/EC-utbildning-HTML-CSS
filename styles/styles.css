@@ -851,7 +851,12 @@ p {
   flex-direction: column;
   flex: 0 0 50%;
   gap: 1rem;
-  padding-inline: 0.8rem;
+}
+.payments .receive-payments .international-features .feature p {
+  max-width: 30ch;
+}
+.payments .receive-payments .international-features .feature:first-child {
+  margin-right: 1rem;
 }
 .payments .transfer-perks-list {
   list-style-position: inside;
@@ -864,8 +869,8 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 3.5rem;
+  width: 3.5rem;
   background-color: #F3F6FF;
   border-radius: 1rem;
 }

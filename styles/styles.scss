@@ -404,8 +404,18 @@ p {
         .features-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            
+            @media (min-width: $medium-screen) {
+                column-gap: 9rem;
+            }
+
+            @media (min-width: $big-screen) {
+                column-gap: 1rem;
+            }
+
         }
     }
+
 
     @media (min-width: $big-screen) {
         justify-content: end;

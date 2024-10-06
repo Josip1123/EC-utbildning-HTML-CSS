@@ -596,6 +596,18 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media (min-width: 768px) and (min-width: 900px) {
+  .app-features-container .features-wrapper {
+    -moz-column-gap: 9rem;
+         column-gap: 9rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .app-features-container .features-wrapper {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
 @media (min-width: 1200px) {
   .app-features-container {
     justify-content: end;

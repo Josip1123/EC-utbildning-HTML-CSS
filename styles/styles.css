@@ -281,8 +281,7 @@ p {
   color: black;
 }
 .header-container .mobile-menu span {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
 }
 @media (min-width: 768px) {
   .header-container {
@@ -613,7 +612,7 @@ p {
 @media (min-width: 768px) {
   .app-features-container .app-features-heading,
   .app-features-container .app-features-heading-text {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 @media (min-width: 1200px) {

@@ -98,8 +98,7 @@ p {
         color: black;
 
         span {
-            font-size: 3rem;
-            font-weight: $bold;
+            font-size: 2.5rem;
         }
     }
 
@@ -421,7 +420,7 @@ p {
         justify-self: center;
 
         @media (min-width: $ipad-mini) {
-            max-width: 90%;
+            max-width: 100%;
         }
 
         @media (min-width: $big-screen) {

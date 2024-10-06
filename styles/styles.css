@@ -202,7 +202,8 @@ button:focus-visible:active {
   outline: none;
 }
 
-input:focus-visible, .submit-btn:focus-visible {
+input:focus-visible,
+.submit-btn:focus-visible {
   outline: 2px solid #5e60f5;
   outline-offset: -2px;
 }
@@ -406,7 +407,7 @@ p {
 }
 @media (min-width: 900px) {
   .hero-wrapper-bg .hero-container .hero-content .hero-text {
-    max-width: 30ch;
+    max-width: 35ch;
   }
 }
 @media (min-width: 1200px) {
@@ -425,12 +426,13 @@ p {
   .hero-wrapper-bg .hero-container .hero-content .app-store-container {
     gap: 0.5rem;
     align-items: flex-start;
-    width: 100%;
+    width: 90%;
   }
 }
 @media (min-width: 900px) {
   .hero-wrapper-bg .hero-container .hero-content .app-store-container {
     flex-direction: row;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -451,6 +453,12 @@ p {
   .hero-wrapper-bg .hero-container .hero-content .app-store-container .google-play,
   .hero-wrapper-bg .hero-container .hero-content .app-store-container .app-store {
     width: 80%;
+  }
+}
+@media (min-width: 900px) {
+  .hero-wrapper-bg .hero-container .hero-content .app-store-container .google-play,
+  .hero-wrapper-bg .hero-container .hero-content .app-store-container .app-store {
+    padding: 2rem 6rem;
   }
 }
 .hero-wrapper-bg .hero-container .hero-content .app-store-container .app-store::before {
@@ -707,7 +715,7 @@ p {
   margin: 0 auto;
   max-width: 450px;
   gap: 2rem;
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 @media (min-width: 768px) {
   .app-showcase-wrapper .app-showcase-container {
@@ -946,7 +954,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
   width: calc(100% - 2rem);
 }
 @media (min-width: 768px) {
@@ -1069,6 +1077,7 @@ p {
 .faq-container .contact-medium-and-large {
   display: none;
   width: 100%;
+  margin-bottom: 2rem;
 }
 @media (min-width: 1200px) {
   .faq-container .contact-medium-and-large {
@@ -1263,7 +1272,7 @@ footer .footer-container {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   font-size: 14px;
   color: #585C7B;
 }

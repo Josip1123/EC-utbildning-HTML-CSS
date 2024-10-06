@@ -27,7 +27,9 @@ button:focus-visible {
         outline: none;
     }
 }
-input:focus-visible, .submit-btn:focus-visible{
+
+input:focus-visible,
+.submit-btn:focus-visible {
     outline: 2px solid $main-color;
     outline-offset: -2px;
 }
@@ -217,7 +219,7 @@ p {
                 }
 
                 @media (min-width: $medium-screen) {
-                    max-width: 30ch;
+                    max-width: 35ch;
                 }
 
                 @media (min-width: $big-screen) {
@@ -234,13 +236,14 @@ p {
                 @media (min-width: $ipad-mini) {
                     gap: 0.5rem;
                     align-items: flex-start;
-                    width: 100%;
+                    width: 90%;
 
                 }
 
                 @media (min-width: $medium-screen) {
 
                     flex-direction: row;
+                    width: 100%;
 
                 }
 
@@ -264,6 +267,10 @@ p {
 
                     @media (min-width: $ipad-mini) {
                         width: 80%;
+                    }
+
+                    @media (min-width: $medium-screen) {
+                        padding: 2rem 6rem;
                     }
                 }
 
@@ -534,7 +541,7 @@ p {
         margin: $center-object;
         @include container-sizes;
         gap: 2rem;
-        padding: 4rem 0;
+        padding: 2rem 0;
 
         .showcase-heading {
             font-size: $h2-fontsize;
@@ -762,7 +769,7 @@ p {
 .faq-container {
     @include container-sizes;
     @include flex-column-center;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
     width: calc(100% - 2rem);
 
     @media (min-width: $big-screen) {
@@ -884,6 +891,7 @@ p {
     .contact-medium-and-large {
         display: none;
         width: 100%;
+        margin-bottom: 2rem;
 
         @media (min-width: $big-screen) {
             grid-column: 1/2;
@@ -1078,7 +1086,7 @@ footer {
         margin: $center-object;
         @include flex-column-center;
         gap: 0.5rem;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         font-size: $S-text;
         color: $font-color;
 
@@ -1110,6 +1118,7 @@ footer {
     span {
         color: $darkmode-text-white !important;
     }
+
     .main-navigation {
         color: white;
     }
@@ -1188,10 +1197,11 @@ footer {
     }
 
     .form-container {
-            background-color: $background-secondary-dark;
-            .submit-btn:focus-visible {
-                outline-color: orange;
-            }
+        background-color: $background-secondary-dark;
+
+        .submit-btn:focus-visible {
+            outline-color: orange;
+        }
     }
 }
 
